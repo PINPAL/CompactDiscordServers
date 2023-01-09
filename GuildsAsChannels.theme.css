@@ -333,10 +333,10 @@
   display: none !important;
 }
 .guilds-2JjMmN .homeIcon-r0w4ny {
-  width: 18px !important;
-  height: 18px !important;
+  width: 22px !important;
+  height: 22px !important;
   position: absolute;
-  left: 13px;
+  left: 11px;
 }
 
 /* hide folder 4x4 server preview */
@@ -384,6 +384,11 @@
   .listItem-3SmSlK
   > div[draggable="true"][data-dnd-name="CS"]:before {
   background-image: url(https://pinpal.github.io/imageDump/CS.png);
+}
+.guilds-2JjMmN
+  .listItem-3SmSlK
+  > div[draggable="true"][data-dnd-name="Tarkov"]:before {
+  background-image: url(https://pinpal.github.io/imageDump/EFT.png);
 }
 .guilds-2JjMmN
   .listItem-3SmSlK
