@@ -4,6 +4,8 @@
  * @description Displays Guilds as Channels
 */
 
+@import url(https://mwittrien.github.io/BetterDiscordAddons/Themes/EmojiReplace/base/Apple.css);
+
 :root {
   --gac-accent: rgb(88, 101, 242);
   --gac-sidebar-bg: rgb(22, 23, 26);
@@ -45,7 +47,7 @@
   > div
   .listItem-3SmSlK
   > .listItemWrapper-3d87LP
-  > .wrapper-28eC3z
+  > .wrapper-2PSQCG
   > svg
   > foreignObject
   > .wrapper-3kah-n[aria-label]:after,
@@ -83,7 +85,7 @@
   > div
   .listItem-3SmSlK
   > .listItemWrapper-3d87LP
-  > .wrapper-28eC3z
+  > .wrapper-2PSQCG
   > svg
   > foreignObject
   > .wrapper-3kah-n[aria-label]:after,
@@ -124,7 +126,7 @@
   > div
   .listItem-3SmSlK
   > .listItemWrapper-3d87LP
-  > .wrapper-28eC3z
+  > .wrapper-2PSQCG
   > svg
   > foreignObject
   > .wrapper-3kah-n[aria-label]:after {
@@ -133,7 +135,7 @@
 }
 .guilds-2JjMmN
   > ul
-  > .scrollerBase-_bVAAt
+  > .scrollerBase-1Pkza4
   > div[style*="opacity: 1; height: 56px; transform: scale(1);"] {
   height: 40px !important;
   box-sizing: border-box;
@@ -152,39 +154,40 @@
   background: none !important;
 }
 /* servers NOT IN folders */
-.guilds-2JjMmN :not(.wrapper-38slSD) .wrapper-28eC3z {
+.guilds-2JjMmN :not(.wrapper-38slSD) .wrapper-2PSQCG {
   background: var(--background-secondary) !important;
   border-radius: var(--gac-roundness);
 }
 /* folder header */
-.guilds-2JjMmN .wrapper-38slSD .wrapper-28eC3z,
+.guilds-2JjMmN .wrapper-38slSD .wrapper-2PSQCG,
 .folder-241Joy {
   background: none !important;
 }
 /* servers IN folders */
-.guilds-2JjMmN .wrapper-38slSD5 .wrapper-28eC3z {
+.guilds-2JjMmN .wrapper-38slSD5 .wrapper-2PSQCG {
   background: none !important;
+}
+/* server icon */
+.guilds-2JjMmN .wrapper-3kah-n .icon-3AqZ2e {
+  border-radius: 50%;
+  height: 30px;
+  width: 30px;
 }
 
 /* image masking fix */
 .guilds-2JjMmN .wrapperSimple-Js2rIO {
   border-radius: 0 !important;
 }
-.guilds-2JjMmN .wrapper-28eC3z mask {
+.guilds-2JjMmN .wrapper-2PSQCG mask {
   display: none;
 }
 .guilds-2JjMmN foreignObject {
   mask: none !important;
 }
-.guilds-2JjMmN .wrapper-28eC3z img {
-  border-radius: 50%;
-  height: 30px;
-  width: 30px;
-}
 
 /* servers & folders & pill selector*/
 .guilds-2JjMmN .wrapper-3kah-n,
-.guilds-2JjMmN .wrapper-28eC3z,
+.guilds-2JjMmN .wrapper-2PSQCG,
 .guilds-2JjMmN .listItem-3SmSlK,
 .guilds-2JjMmN .listItem-3SmSlK .blobContainer-ikKyFs,
 .guilds-2JjMmN foreignObject,
@@ -204,7 +207,7 @@
   transition-delay: 0.55s;
 }
 .guilds-2JjMmN:hover .wrapper-3kah-n,
-.guilds-2JjMmN:hover .wrapper-28eC3z,
+.guilds-2JjMmN:hover .wrapper-2PSQCG,
 .guilds-2JjMmN:hover .listItem-3SmSlK,
 .guilds-2JjMmN:hover .listItem-3SmSlK .blobContainer-ikKyFs,
 .guilds-2JjMmN:hover foreignObject,
@@ -419,4 +422,9 @@
   .listItem-3SmSlK
   > div[draggable="true"][data-dnd-name="Programming"]:before {
   background-image: url(https://pinpal.github.io/imageDump/Programming.png);
+}
+.guilds-2JjMmN
+  .listItem-3SmSlK
+  > div[draggable="true"][data-dnd-name="COD"]:before {
+  background-image: url(https://pinpal.github.io/imageDump/COD.png);
 }
