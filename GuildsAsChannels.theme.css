@@ -153,6 +153,9 @@
 .guilds-2JjMmN .folder-241Joy {
   background: none !important;
 }
+.guilds-2JjMmN .svg-2ifYOU {
+  contain: none !important;
+}
 /* servers NOT IN folders */
 .guilds-2JjMmN :not(.wrapper-38slSD) .wrapper-2PSQCG {
   background: var(--background-secondary) !important;
