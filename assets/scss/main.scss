@@ -13,6 +13,11 @@
 // --header-primary: #f2f3f5;
 // --background-secondary: #2b2d31;
 
+// Always show now playing column
+.nowPlayingColumn_f5023f {
+	display: block !important;
+}
+
 // Server List
 nav.guilds__2b93a[aria-label="Servers sidebar"] {
 	background: var(--gac-sidebar-bg) !important;
