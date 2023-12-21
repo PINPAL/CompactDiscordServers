@@ -5,6 +5,8 @@
 	--gac-padding: 8px;
 	--gac-border-radius: 8px;
 	--gac-transition-delay: 0.65s;
+	--gac-image-filter: ;
+	--gac-image-hover-brightness: 10;
 
 	--gac-box-color: var(--background-secondary);
 	--gac-text-color: var(--channels-default);
@@ -22,6 +24,10 @@
 	&.theme-light {
 		--gac-box-color: rgba(255, 255, 255, 0.4);
 	}
+}
+.theme-light {
+	--gac-image-filter: invert(1);
+	--gac-image-hover-brightness: 0.1;
 }
 
 // Default Variables
@@ -326,10 +332,11 @@ nav.guilds__2b93a[aria-label="Servers sidebar"] {
 		& > div[draggable="true"] {
 			&:hover {
 				&::before {
-					filter: brightness(10);
+					filter: var(--gac-image-filter) brightness(var(--gac-image-hover-brightness));
 				}
 			}
 			&::before {
+				filter: var(--gac-image-filter);
 				content: "";
 				width: 36px;
 				height: 36px;

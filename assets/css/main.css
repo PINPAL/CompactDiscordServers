@@ -1,1 +1,378 @@
-:root{--gac-expanded-width: 72px;--gac-collapse-width: 72px;--gac-server-height: 48px;--gac-padding: 8px;--gac-border-radius: 8px;--gac-transition-delay: 0.65s;--gac-box-color: var(--background-secondary);--gac-text-color: var(--channels-default);--gac-text-hover-color: var(--interactive-active);--gac-hover-color: var(--background-modifier-selected);--gac-hover-color-overlay: var(--background-modifier-selected);--gac-accent-color: var(--brand-experiment)}.custom-theme-background.theme-dark{--gac-box-color: rgba(0, 0, 0, 0.4);--gac-hover-color-overlay: rgba(0, 0, 0, 0.4);--gac-hover-color: rgba(0, 0, 0, 0.65)}.custom-theme-background.theme-light{--gac-box-color: rgba(255, 255, 255, 0.4)}.nowPlayingColumn_f5023f{display:block !important}nav.guilds__2b93a[aria-label="Servers sidebar"]{width:var(--gac-expanded-width) !important;max-width:var(--gac-expanded-width) !important;min-width:var(--gac-expanded-width) !important;flex-basis:240px !important;flex-grow:0 !important;flex-shrink:0 !important;overflow-y:auto !important;transition:max-width .25s ease,min-width .25s ease;transition-delay:var(--gac-transition-delay)}nav.guilds__2b93a[aria-label="Servers sidebar"] .expandedFolderBackground__1bec6{background:var(--gac-box-color) !important;width:calc(var(--gac-expanded-width) - 2*var(--gac-padding)) !important;max-width:calc(var(--gac-expanded-width) - 2*var(--gac-padding)) !important;min-width:calc(var(--gac-expanded-width) - 2*var(--gac-padding)) !important;height:100% !important;left:var(--gac-padding) !important;border-radius:var(--gac-border-radius) !important;bottom:0 !important;box-sizing:border-box !important;transition:max-width .25s ease,min-width .25s ease;transition-delay:var(--gac-transition-delay)}nav.guilds__2b93a[aria-label="Servers sidebar"] .expandedFolderBackground__1bec6::before{content:"";position:absolute;top:0;left:0;width:100%;height:48px;background:var(--gac-hover-color-overlay);border-radius:var(--gac-border-radius) var(--gac-border-radius) 0 0}nav.guilds__2b93a[aria-label="Servers sidebar"] .expandedFolderBackground__1bec6.collapsed__0a270::before{background:none}nav.guilds__2b93a[aria-label="Servers sidebar"] .expandedFolderBackground__1bec6.collapsed__0a270:hover{background:var(--gac-hover-color) !important}nav.guilds__2b93a[aria-label="Servers sidebar"] .wrapper_ed1dea:hover .expandedFolderBackground__1bec6.collapsed__0a270{background:var(--gac-hover-color) !important}nav.guilds__2b93a[aria-label="Servers sidebar"] .wrapper_ed1dea ul{height:fit-content !important}nav.guilds__2b93a[aria-label="Servers sidebar"] .folderIconWrapper__72239,nav.guilds__2b93a[aria-label="Servers sidebar"] .folder__17546,nav.guilds__2b93a[aria-label="Servers sidebar"] .circleIconButton_d8df29,nav.guilds__2b93a[aria-label="Servers sidebar"] .childWrapper__01b9c{background:none !important}nav.guilds__2b93a[aria-label="Servers sidebar"] .circleIconButton_d8df29:hover,nav.guilds__2b93a[aria-label="Servers sidebar"] .childWrapper__01b9c:hover,nav.guilds__2b93a[aria-label="Servers sidebar"] .wrapper_ed1dea ul>.listItem_fa7b36 foreignObject>div:hover,nav.guilds__2b93a[aria-label="Servers sidebar"] div[aria-label=Servers]>.listItem_fa7b36 foreignObject>div:hover{--gac-box-color: var(--gac-hover-color);--gac-text-color: var(--gac-text-hover-color)}nav.guilds__2b93a[aria-label="Servers sidebar"] .circleIconButton_d8df29 *,nav.guilds__2b93a[aria-label="Servers sidebar"] .childWrapper__01b9c *,nav.guilds__2b93a[aria-label="Servers sidebar"] .wrapper_ed1dea ul>.listItem_fa7b36 foreignObject>div *,nav.guilds__2b93a[aria-label="Servers sidebar"] div[aria-label=Servers]>.listItem_fa7b36 foreignObject>div *{position:relative !important;z-index:1 !important}nav.guilds__2b93a[aria-label="Servers sidebar"] .circleIconButton_d8df29::before,nav.guilds__2b93a[aria-label="Servers sidebar"] .childWrapper__01b9c::before,nav.guilds__2b93a[aria-label="Servers sidebar"] .wrapper_ed1dea ul>.listItem_fa7b36 foreignObject>div::before,nav.guilds__2b93a[aria-label="Servers sidebar"] div[aria-label=Servers]>.listItem_fa7b36 foreignObject>div::before{content:"";position:absolute;top:0;left:0;width:calc(var(--gac-expanded-width) - 2*var(--gac-padding));max-width:100%;min-width:100%;height:var(--gac-server-height);background:var(--gac-box-color);border-radius:var(--gac-border-radius);z-index:0;transition:max-width .25s ease,width .25s ease,min-width .25s ease;transition-delay:var(--gac-transition-delay)}nav.guilds__2b93a[aria-label="Servers sidebar"] .wrapper_ed1dea ul>.listItem_fa7b36 foreignObject>div{--gac-box-color: none}nav.guilds__2b93a[aria-label="Servers sidebar"] .wrapper_ed1dea ul>.listItem_fa7b36 foreignObject>div:hover{--gac-box-color: var(--gac-hover-color-overlay)}nav.guilds__2b93a[aria-label="Servers sidebar"] .selected_ad2d13,nav.guilds__2b93a[aria-label="Servers sidebar"] .selected_f5ec8e,nav.guilds__2b93a[aria-label="Servers sidebar"] .selected__98d51{--gac-box-color: var(--gac-accent-color);--gac-text-color: var(--gac-text-hover-color)}nav.guilds__2b93a[aria-label="Servers sidebar"] .wrapperSimple_a34580{border-radius:unset !important}nav.guilds__2b93a[aria-label="Servers sidebar"] .scrollerBase_dc3aa9>.listItem_fa7b36{display:none !important}nav.guilds__2b93a[aria-label="Servers sidebar"] div[aria-label=Servers]>.tutorialContainer__890ea,nav.guilds__2b93a[aria-label="Servers sidebar"] div[aria-label=Servers]>.listItem_fa7b36,nav.guilds__2b93a[aria-label="Servers sidebar"] div[aria-label=Servers]>.wrapper_ed1dea,nav.guilds__2b93a[aria-label="Servers sidebar"] div[aria-label=Servers]>.tutorialContainer_dc6fde,nav.guilds__2b93a[aria-label="Servers sidebar"] .scrollerBase_dc3aa9>.tutorialContainer__890ea,nav.guilds__2b93a[aria-label="Servers sidebar"] .scrollerBase_dc3aa9>.listItem_fa7b36,nav.guilds__2b93a[aria-label="Servers sidebar"] .scrollerBase_dc3aa9>.wrapper_ed1dea,nav.guilds__2b93a[aria-label="Servers sidebar"] .scrollerBase_dc3aa9>.tutorialContainer_dc6fde{margin-bottom:var(--gac-padding) !important}nav.guilds__2b93a[aria-label="Servers sidebar"] .circleIconButton_d8df29,nav.guilds__2b93a[aria-label="Servers sidebar"] .listItem_fa7b36,nav.guilds__2b93a[aria-label="Servers sidebar"] .wrapper__3af0b,nav.guilds__2b93a[aria-label="Servers sidebar"] .childWrapper__01b9c,nav.guilds__2b93a[aria-label="Servers sidebar"] .folderIconWrapper__72239,nav.guilds__2b93a[aria-label="Servers sidebar"] .wrapper_a54cba,nav.guilds__2b93a[aria-label="Servers sidebar"] .target__47b05 .tutorialContainer_dc6fde,nav.guilds__2b93a[aria-label="Servers sidebar"] .tutorialContainer__890ea{width:calc(var(--gac-expanded-width) - 2*var(--gac-padding)) !important;max-width:calc(var(--gac-expanded-width) - 2*var(--gac-padding)) !important;min-width:calc(var(--gac-expanded-width) - 2*var(--gac-padding)) !important;transition:max-width .25s ease,min-width .25s ease,width .25s ease;transition-delay:var(--gac-transition-delay)}nav.guilds__2b93a[aria-label="Servers sidebar"] .circleIconButton_d8df29 foreignObject,nav.guilds__2b93a[aria-label="Servers sidebar"] .circleIconButton_d8df29 .wrapperSimple_a34580,nav.guilds__2b93a[aria-label="Servers sidebar"] .circleIconButton_d8df29 .wrapper_d281dd,nav.guilds__2b93a[aria-label="Servers sidebar"] .circleIconButton_d8df29 .listItemWrapper__1f93b,nav.guilds__2b93a[aria-label="Servers sidebar"] .circleIconButton_d8df29 svg,nav.guilds__2b93a[aria-label="Servers sidebar"] .listItem_fa7b36 foreignObject,nav.guilds__2b93a[aria-label="Servers sidebar"] .listItem_fa7b36 .wrapperSimple_a34580,nav.guilds__2b93a[aria-label="Servers sidebar"] .listItem_fa7b36 .wrapper_d281dd,nav.guilds__2b93a[aria-label="Servers sidebar"] .listItem_fa7b36 .listItemWrapper__1f93b,nav.guilds__2b93a[aria-label="Servers sidebar"] .listItem_fa7b36 svg,nav.guilds__2b93a[aria-label="Servers sidebar"] .wrapper__3af0b foreignObject,nav.guilds__2b93a[aria-label="Servers sidebar"] .wrapper__3af0b .wrapperSimple_a34580,nav.guilds__2b93a[aria-label="Servers sidebar"] .wrapper__3af0b .wrapper_d281dd,nav.guilds__2b93a[aria-label="Servers sidebar"] .wrapper__3af0b .listItemWrapper__1f93b,nav.guilds__2b93a[aria-label="Servers sidebar"] .wrapper__3af0b svg,nav.guilds__2b93a[aria-label="Servers sidebar"] .childWrapper__01b9c foreignObject,nav.guilds__2b93a[aria-label="Servers sidebar"] .childWrapper__01b9c .wrapperSimple_a34580,nav.guilds__2b93a[aria-label="Servers sidebar"] .childWrapper__01b9c .wrapper_d281dd,nav.guilds__2b93a[aria-label="Servers sidebar"] .childWrapper__01b9c .listItemWrapper__1f93b,nav.guilds__2b93a[aria-label="Servers sidebar"] .childWrapper__01b9c svg,nav.guilds__2b93a[aria-label="Servers sidebar"] .folderIconWrapper__72239 foreignObject,nav.guilds__2b93a[aria-label="Servers sidebar"] .folderIconWrapper__72239 .wrapperSimple_a34580,nav.guilds__2b93a[aria-label="Servers sidebar"] .folderIconWrapper__72239 .wrapper_d281dd,nav.guilds__2b93a[aria-label="Servers sidebar"] .folderIconWrapper__72239 .listItemWrapper__1f93b,nav.guilds__2b93a[aria-label="Servers sidebar"] .folderIconWrapper__72239 svg,nav.guilds__2b93a[aria-label="Servers sidebar"] .wrapper_a54cba foreignObject,nav.guilds__2b93a[aria-label="Servers sidebar"] .wrapper_a54cba .wrapperSimple_a34580,nav.guilds__2b93a[aria-label="Servers sidebar"] .wrapper_a54cba .wrapper_d281dd,nav.guilds__2b93a[aria-label="Servers sidebar"] .wrapper_a54cba .listItemWrapper__1f93b,nav.guilds__2b93a[aria-label="Servers sidebar"] .wrapper_a54cba svg,nav.guilds__2b93a[aria-label="Servers sidebar"] .target__47b05 .tutorialContainer_dc6fde foreignObject,nav.guilds__2b93a[aria-label="Servers sidebar"] .target__47b05 .tutorialContainer_dc6fde .wrapperSimple_a34580,nav.guilds__2b93a[aria-label="Servers sidebar"] .target__47b05 .tutorialContainer_dc6fde .wrapper_d281dd,nav.guilds__2b93a[aria-label="Servers sidebar"] .target__47b05 .tutorialContainer_dc6fde .listItemWrapper__1f93b,nav.guilds__2b93a[aria-label="Servers sidebar"] .target__47b05 .tutorialContainer_dc6fde svg,nav.guilds__2b93a[aria-label="Servers sidebar"] .tutorialContainer__890ea foreignObject,nav.guilds__2b93a[aria-label="Servers sidebar"] .tutorialContainer__890ea .wrapperSimple_a34580,nav.guilds__2b93a[aria-label="Servers sidebar"] .tutorialContainer__890ea .wrapper_d281dd,nav.guilds__2b93a[aria-label="Servers sidebar"] .tutorialContainer__890ea .listItemWrapper__1f93b,nav.guilds__2b93a[aria-label="Servers sidebar"] .tutorialContainer__890ea svg{width:calc(var(--gac-expanded-width) - 2*var(--gac-padding)) !important;max-width:calc(var(--gac-expanded-width) - 2*var(--gac-padding)) !important;min-width:calc(var(--gac-expanded-width) - 2*var(--gac-padding)) !important;transition:max-width .25s ease,min-width .25s ease,width .25s ease;transition-delay:var(--gac-transition-delay)}nav.guilds__2b93a[aria-label="Servers sidebar"] .circleIconButton_d8df29 foreignObject,nav.guilds__2b93a[aria-label="Servers sidebar"] .listItem_fa7b36 foreignObject,nav.guilds__2b93a[aria-label="Servers sidebar"] .wrapper__3af0b foreignObject,nav.guilds__2b93a[aria-label="Servers sidebar"] .childWrapper__01b9c foreignObject,nav.guilds__2b93a[aria-label="Servers sidebar"] .folderIconWrapper__72239 foreignObject,nav.guilds__2b93a[aria-label="Servers sidebar"] .wrapper_a54cba foreignObject,nav.guilds__2b93a[aria-label="Servers sidebar"] .target__47b05 .tutorialContainer_dc6fde foreignObject,nav.guilds__2b93a[aria-label="Servers sidebar"] .tutorialContainer__890ea foreignObject{transform:translateX(-4px);transition:max-width .25s ease,min-width .25s ease,width .25s ease,transform .25s ease;transition-delay:var(--gac-transition-delay)}nav.guilds__2b93a[aria-label="Servers sidebar"] svg>foreignObject>.wrapper_d281dd,nav.guilds__2b93a[aria-label="Servers sidebar"] div[aria-label="Direct Messages"] .childWrapper__01b9c,nav.guilds__2b93a[aria-label="Servers sidebar"] .circleIconButton_d8df29{display:inline-block;padding-left:var(--gac-padding) !important;line-height:48px !important;vertical-align:middle}nav.guilds__2b93a[aria-label="Servers sidebar"] .pill__6b31b,nav.guilds__2b93a[aria-label="Servers sidebar"] .pill_d1140c{left:-8px !important}nav.guilds__2b93a[aria-label="Servers sidebar"] .listItem_fa7b36{display:block !important;position:relative !important;margin-left:var(--gac-padding) !important;margin-bottom:0 !important}nav.guilds__2b93a[aria-label="Servers sidebar"] .listItem_fa7b36>div[draggable=true]:hover,nav.guilds__2b93a[aria-label="Servers sidebar"] .listItem_fa7b36 .circleIconButton_d8df29:hover,nav.guilds__2b93a[aria-label="Servers sidebar"] .listItem_fa7b36 div[data-list-item-id=guildsnav___home]:hover,nav.guilds__2b93a[aria-label="Servers sidebar"] .listItem_fa7b36 .wrapper_d281dd:hover{--gac-text-color: var(--gac-text-hover-color)}nav.guilds__2b93a[aria-label="Servers sidebar"] .listItem_fa7b36>div[draggable=true]::after,nav.guilds__2b93a[aria-label="Servers sidebar"] .listItem_fa7b36 .circleIconButton_d8df29::after,nav.guilds__2b93a[aria-label="Servers sidebar"] .listItem_fa7b36 div[data-list-item-id=guildsnav___home]::after,nav.guilds__2b93a[aria-label="Servers sidebar"] .listItem_fa7b36 .wrapper_d281dd::after{white-space:nowrap;width:calc(var(--gac-expanded-width) - var(--gac-collapse-width) - var(--gac-padding));max-width:calc(var(--gac-expanded-width) - var(--gac-collapse-width) - var(--gac-padding));min-width:calc(var(--gac-expanded-width) - var(--gac-collapse-width) - var(--gac-padding));overflow:hidden;text-overflow:ellipsis;position:absolute;top:50%;transform:translateY(-50%);left:calc(7*var(--gac-padding));color:var(--gac-text-color);font-size:16px;line-height:20px;font-weight:500;pointer-events:none;font-family:inherit;max-width:0;opacity:0;transition:max-width .25s ease,min-width .25s ease,opacity .5s ease;transition-delay:var(--gac-transition-delay)}nav.guilds__2b93a[aria-label="Servers sidebar"] .listItem_fa7b36 img{display:inline-block !important;vertical-align:middle !important;line-height:48px !important;margin-left:4px !important;width:32px !important;height:32px !important;border-radius:50% !important}nav.guilds__2b93a[aria-label="Servers sidebar"] .listItem_fa7b36 div[aria-label="Direct Messages"] svg[role=img],nav.guilds__2b93a[aria-label="Servers sidebar"] .listItem_fa7b36 .circleIconButton_d8df29 svg[role=img]{display:inline-block !important;vertical-align:middle !important;line-height:48px !important;width:26px !important;min-width:26px !important;max-width:26px !important;height:26px !important;min-height:26px !important;filter:brightness(0.75) !important}nav.guilds__2b93a[aria-label="Servers sidebar"] .listItem_fa7b36 .circleIconButton_d8df29 svg[role=img]{margin-left:6px !important}nav.guilds__2b93a[aria-label="Servers sidebar"] .listItem_fa7b36 .circleIconButton_d8df29::after{content:attr(aria-label)}nav.guilds__2b93a[aria-label="Servers sidebar"] .listItem_fa7b36 div[data-list-item-id=guildsnav___home]::after{content:attr(aria-label)}nav.guilds__2b93a[aria-label="Servers sidebar"] .listItem_fa7b36 .wrapper_d281dd::after{content:attr(aria-label)}nav.guilds__2b93a[aria-label="Servers sidebar"] .listItem_fa7b36>div[draggable=true]::after{content:attr(data-dnd-name)}nav.guilds__2b93a[aria-label="Servers sidebar"] .listItem_fa7b36>div[draggable=true]:hover::before{filter:brightness(10)}nav.guilds__2b93a[aria-label="Servers sidebar"] .listItem_fa7b36>div[draggable=true]::before{content:"";width:36px;height:36px;background-size:36px;background-position:center;position:absolute;left:calc(3*var(--gac-padding) + var(--gac-padding)/2);top:50%;transform:translate(-50%, -50%);z-index:99;pointer-events:none}nav.guilds__2b93a[aria-label="Servers sidebar"] .listItem_fa7b36>div[draggable=true][data-dnd-name=IRL]::before{background-image:url(https://pinpal.github.io/imageDump/IRL.png)}nav.guilds__2b93a[aria-label="Servers sidebar"] .listItem_fa7b36>div[draggable=true][data-dnd-name=CS]:before{background-image:url(https://pinpal.github.io/imageDump/CS.png)}nav.guilds__2b93a[aria-label="Servers sidebar"] .listItem_fa7b36>div[draggable=true][data-dnd-name=Tarkov]:before{background-image:url(https://pinpal.github.io/imageDump/EFT.png)}nav.guilds__2b93a[aria-label="Servers sidebar"] .listItem_fa7b36>div[draggable=true][data-dnd-name=Valorant]:before{background-image:url(https://pinpal.github.io/imageDump/Val.png)}nav.guilds__2b93a[aria-label="Servers sidebar"] .listItem_fa7b36>div[draggable=true][data-dnd-name=MC]:before{background-image:url(https://pinpal.github.io/imageDump/MC_Alt.png)}nav.guilds__2b93a[aria-label="Servers sidebar"] .listItem_fa7b36>div[draggable=true][data-dnd-name=Modded]:before{background-image:url(https://pinpal.github.io/imageDump/MC_Alt.png)}nav.guilds__2b93a[aria-label="Servers sidebar"] .listItem_fa7b36>div[draggable=true][data-dnd-name=iOS]:before{background-image:url(https://pinpal.github.io/imageDump/Jailbreak.png)}nav.guilds__2b93a[aria-label="Servers sidebar"] .listItem_fa7b36>div[draggable=true][data-dnd-name=Keyboards]:before{background-image:url(https://pinpal.github.io/imageDump/Keyboards.png)}nav.guilds__2b93a[aria-label="Servers sidebar"] .listItem_fa7b36>div[draggable=true][data-dnd-name=Computing]:before{background-image:url(https://pinpal.github.io/imageDump/PC.png)}nav.guilds__2b93a[aria-label="Servers sidebar"] .listItem_fa7b36>div[draggable=true][data-dnd-name=Programming]:before{background-image:url(https://pinpal.github.io/imageDump/Programming.png)}nav.guilds__2b93a[aria-label="Servers sidebar"] .listItem_fa7b36>div[draggable=true][data-dnd-name=COD]:before{background-image:url(https://pinpal.github.io/imageDump/COD.png)}nav.guilds__2b93a[aria-label="Servers sidebar"] .listItem_fa7b36 .closedFolderIconWrapper__7321f,nav.guilds__2b93a[aria-label="Servers sidebar"] .listItem_fa7b36 .expandedFolderIconWrapper__458cf{visibility:hidden}nav.guilds__2b93a[aria-label="Servers sidebar"]:hover{--gac-expanded-width: 220px;--gac-transition-delay: 0s}nav.guilds__2b93a[aria-label="Servers sidebar"]:hover .listItem_fa7b36>div[draggable=true]::after,nav.guilds__2b93a[aria-label="Servers sidebar"]:hover .listItem_fa7b36 .circleIconButton_d8df29::after,nav.guilds__2b93a[aria-label="Servers sidebar"]:hover .listItem_fa7b36 div[data-list-item-id=guildsnav___home]::after,nav.guilds__2b93a[aria-label="Servers sidebar"]:hover .listItem_fa7b36 .wrapper_d281dd::after{max-width:calc(var(--gac-expanded-width) - var(--gac-collapse-width) - 1.5*var(--gac-padding));opacity:1}nav.guilds__2b93a[aria-label="Servers sidebar"]:hover .circleIconButton_d8df29 foreignObject,nav.guilds__2b93a[aria-label="Servers sidebar"]:hover .listItem_fa7b36 foreignObject,nav.guilds__2b93a[aria-label="Servers sidebar"]:hover .wrapper__3af0b foreignObject,nav.guilds__2b93a[aria-label="Servers sidebar"]:hover .childWrapper__01b9c foreignObject,nav.guilds__2b93a[aria-label="Servers sidebar"]:hover .folderIconWrapper__72239 foreignObject,nav.guilds__2b93a[aria-label="Servers sidebar"]:hover .tutorialContainer_dc6fde foreignObject,nav.guilds__2b93a[aria-label="Servers sidebar"]:hover .tutorialContainer__890ea foreignObject{transform:translateX(-78px)}
+:root {
+  --gac-expanded-width: 72px;
+  --gac-collapse-width: 72px;
+  --gac-server-height: 48px;
+  --gac-padding: 8px;
+  --gac-border-radius: 8px;
+  --gac-transition-delay: 0.65s;
+  --gac-image-filter: ;
+  --gac-image-hover-brightness: 10;
+  --gac-box-color: var(--background-secondary);
+  --gac-text-color: var(--channels-default);
+  --gac-text-hover-color: var(--interactive-active);
+  --gac-hover-color: var(--background-modifier-selected);
+  --gac-hover-color-overlay: var(--background-modifier-selected);
+  --gac-accent-color: var(--brand-experiment);
+}
+
+.custom-theme-background.theme-dark {
+  --gac-box-color: rgba(0, 0, 0, 0.4);
+  --gac-hover-color-overlay: rgba(0, 0, 0, 0.4);
+  --gac-hover-color: rgba(0, 0, 0, 0.65);
+}
+.custom-theme-background.theme-light {
+  --gac-box-color: rgba(255, 255, 255, 0.4);
+}
+
+.theme-light {
+  --gac-image-filter: invert(1);
+  --gac-image-hover-brightness: 0.1;
+}
+
+.nowPlayingColumn_f5023f {
+  display: block !important;
+}
+
+nav.guilds__2b93a[aria-label="Servers sidebar"] {
+  width: var(--gac-expanded-width) !important;
+  max-width: var(--gac-expanded-width) !important;
+  min-width: var(--gac-expanded-width) !important;
+  flex-basis: 240px !important;
+  flex-grow: 0 !important;
+  flex-shrink: 0 !important;
+  overflow-y: auto !important;
+  transition: max-width 0.25s ease, min-width 0.25s ease;
+  transition-delay: var(--gac-transition-delay);
+}
+nav.guilds__2b93a[aria-label="Servers sidebar"] .expandedFolderBackground__1bec6 {
+  background: var(--gac-box-color) !important;
+  width: calc(var(--gac-expanded-width) - 2 * var(--gac-padding)) !important;
+  max-width: calc(var(--gac-expanded-width) - 2 * var(--gac-padding)) !important;
+  min-width: calc(var(--gac-expanded-width) - 2 * var(--gac-padding)) !important;
+  height: 100% !important;
+  left: var(--gac-padding) !important;
+  border-radius: var(--gac-border-radius) !important;
+  bottom: 0 !important;
+  box-sizing: border-box !important;
+  transition: max-width 0.25s ease, min-width 0.25s ease;
+  transition-delay: var(--gac-transition-delay);
+}
+nav.guilds__2b93a[aria-label="Servers sidebar"] .expandedFolderBackground__1bec6::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 48px;
+  background: var(--gac-hover-color-overlay);
+  border-radius: var(--gac-border-radius) var(--gac-border-radius) 0 0;
+}
+nav.guilds__2b93a[aria-label="Servers sidebar"] .expandedFolderBackground__1bec6.collapsed__0a270::before {
+  background: none;
+}
+nav.guilds__2b93a[aria-label="Servers sidebar"] .expandedFolderBackground__1bec6.collapsed__0a270:hover {
+  background: var(--gac-hover-color) !important;
+}
+nav.guilds__2b93a[aria-label="Servers sidebar"] .wrapper_ed1dea:hover .expandedFolderBackground__1bec6.collapsed__0a270 {
+  background: var(--gac-hover-color) !important;
+}
+nav.guilds__2b93a[aria-label="Servers sidebar"] .wrapper_ed1dea ul {
+  height: fit-content !important;
+}
+nav.guilds__2b93a[aria-label="Servers sidebar"] .folderIconWrapper__72239,
+nav.guilds__2b93a[aria-label="Servers sidebar"] .folder__17546,
+nav.guilds__2b93a[aria-label="Servers sidebar"] .circleIconButton_d8df29,
+nav.guilds__2b93a[aria-label="Servers sidebar"] .childWrapper__01b9c {
+  background: none !important;
+}
+nav.guilds__2b93a[aria-label="Servers sidebar"] .circleIconButton_d8df29:hover,
+nav.guilds__2b93a[aria-label="Servers sidebar"] .childWrapper__01b9c:hover,
+nav.guilds__2b93a[aria-label="Servers sidebar"] .wrapper_ed1dea ul > .listItem_fa7b36 foreignObject > div:hover,
+nav.guilds__2b93a[aria-label="Servers sidebar"] div[aria-label=Servers] > .listItem_fa7b36 foreignObject > div:hover {
+  --gac-box-color: var(--gac-hover-color);
+  --gac-text-color: var(--gac-text-hover-color);
+}
+nav.guilds__2b93a[aria-label="Servers sidebar"] .circleIconButton_d8df29 *,
+nav.guilds__2b93a[aria-label="Servers sidebar"] .childWrapper__01b9c *,
+nav.guilds__2b93a[aria-label="Servers sidebar"] .wrapper_ed1dea ul > .listItem_fa7b36 foreignObject > div *,
+nav.guilds__2b93a[aria-label="Servers sidebar"] div[aria-label=Servers] > .listItem_fa7b36 foreignObject > div * {
+  position: relative !important;
+  z-index: 1 !important;
+}
+nav.guilds__2b93a[aria-label="Servers sidebar"] .circleIconButton_d8df29::before,
+nav.guilds__2b93a[aria-label="Servers sidebar"] .childWrapper__01b9c::before,
+nav.guilds__2b93a[aria-label="Servers sidebar"] .wrapper_ed1dea ul > .listItem_fa7b36 foreignObject > div::before,
+nav.guilds__2b93a[aria-label="Servers sidebar"] div[aria-label=Servers] > .listItem_fa7b36 foreignObject > div::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: calc(var(--gac-expanded-width) - 2 * var(--gac-padding));
+  max-width: 100%;
+  min-width: 100%;
+  height: var(--gac-server-height);
+  background: var(--gac-box-color);
+  border-radius: var(--gac-border-radius);
+  z-index: 0;
+  transition: max-width 0.25s ease, width 0.25s ease, min-width 0.25s ease;
+  transition-delay: var(--gac-transition-delay);
+}
+nav.guilds__2b93a[aria-label="Servers sidebar"] .wrapper_ed1dea ul > .listItem_fa7b36 foreignObject > div {
+  --gac-box-color: none;
+}
+nav.guilds__2b93a[aria-label="Servers sidebar"] .wrapper_ed1dea ul > .listItem_fa7b36 foreignObject > div:hover {
+  --gac-box-color: var(--gac-hover-color-overlay);
+}
+nav.guilds__2b93a[aria-label="Servers sidebar"] .selected_ad2d13,
+nav.guilds__2b93a[aria-label="Servers sidebar"] .selected_f5ec8e,
+nav.guilds__2b93a[aria-label="Servers sidebar"] .selected__98d51 {
+  --gac-box-color: var(--gac-accent-color);
+  --gac-text-color: var(--gac-text-hover-color);
+}
+nav.guilds__2b93a[aria-label="Servers sidebar"] .wrapperSimple_a34580 {
+  border-radius: unset !important;
+}
+nav.guilds__2b93a[aria-label="Servers sidebar"] .scrollerBase_dc3aa9 > .listItem_fa7b36 {
+  display: none !important;
+}
+nav.guilds__2b93a[aria-label="Servers sidebar"] div[aria-label=Servers] > .tutorialContainer__890ea, nav.guilds__2b93a[aria-label="Servers sidebar"] div[aria-label=Servers] > .listItem_fa7b36, nav.guilds__2b93a[aria-label="Servers sidebar"] div[aria-label=Servers] > .wrapper_ed1dea, nav.guilds__2b93a[aria-label="Servers sidebar"] div[aria-label=Servers] > .tutorialContainer_dc6fde,
+nav.guilds__2b93a[aria-label="Servers sidebar"] .scrollerBase_dc3aa9 > .tutorialContainer__890ea,
+nav.guilds__2b93a[aria-label="Servers sidebar"] .scrollerBase_dc3aa9 > .listItem_fa7b36,
+nav.guilds__2b93a[aria-label="Servers sidebar"] .scrollerBase_dc3aa9 > .wrapper_ed1dea,
+nav.guilds__2b93a[aria-label="Servers sidebar"] .scrollerBase_dc3aa9 > .tutorialContainer_dc6fde {
+  margin-bottom: var(--gac-padding) !important;
+}
+nav.guilds__2b93a[aria-label="Servers sidebar"] .circleIconButton_d8df29,
+nav.guilds__2b93a[aria-label="Servers sidebar"] .listItem_fa7b36,
+nav.guilds__2b93a[aria-label="Servers sidebar"] .wrapper__3af0b,
+nav.guilds__2b93a[aria-label="Servers sidebar"] .childWrapper__01b9c,
+nav.guilds__2b93a[aria-label="Servers sidebar"] .folderIconWrapper__72239,
+nav.guilds__2b93a[aria-label="Servers sidebar"] .wrapper_a54cba,
+nav.guilds__2b93a[aria-label="Servers sidebar"] .target__47b05 .tutorialContainer_dc6fde,
+nav.guilds__2b93a[aria-label="Servers sidebar"] .tutorialContainer__890ea {
+  width: calc(var(--gac-expanded-width) - 2 * var(--gac-padding)) !important;
+  max-width: calc(var(--gac-expanded-width) - 2 * var(--gac-padding)) !important;
+  min-width: calc(var(--gac-expanded-width) - 2 * var(--gac-padding)) !important;
+  transition: max-width 0.25s ease, min-width 0.25s ease, width 0.25s ease;
+  transition-delay: var(--gac-transition-delay);
+}
+nav.guilds__2b93a[aria-label="Servers sidebar"] .circleIconButton_d8df29 foreignObject,
+nav.guilds__2b93a[aria-label="Servers sidebar"] .circleIconButton_d8df29 .wrapperSimple_a34580,
+nav.guilds__2b93a[aria-label="Servers sidebar"] .circleIconButton_d8df29 .wrapper_d281dd,
+nav.guilds__2b93a[aria-label="Servers sidebar"] .circleIconButton_d8df29 .listItemWrapper__1f93b,
+nav.guilds__2b93a[aria-label="Servers sidebar"] .circleIconButton_d8df29 svg,
+nav.guilds__2b93a[aria-label="Servers sidebar"] .listItem_fa7b36 foreignObject,
+nav.guilds__2b93a[aria-label="Servers sidebar"] .listItem_fa7b36 .wrapperSimple_a34580,
+nav.guilds__2b93a[aria-label="Servers sidebar"] .listItem_fa7b36 .wrapper_d281dd,
+nav.guilds__2b93a[aria-label="Servers sidebar"] .listItem_fa7b36 .listItemWrapper__1f93b,
+nav.guilds__2b93a[aria-label="Servers sidebar"] .listItem_fa7b36 svg,
+nav.guilds__2b93a[aria-label="Servers sidebar"] .wrapper__3af0b foreignObject,
+nav.guilds__2b93a[aria-label="Servers sidebar"] .wrapper__3af0b .wrapperSimple_a34580,
+nav.guilds__2b93a[aria-label="Servers sidebar"] .wrapper__3af0b .wrapper_d281dd,
+nav.guilds__2b93a[aria-label="Servers sidebar"] .wrapper__3af0b .listItemWrapper__1f93b,
+nav.guilds__2b93a[aria-label="Servers sidebar"] .wrapper__3af0b svg,
+nav.guilds__2b93a[aria-label="Servers sidebar"] .childWrapper__01b9c foreignObject,
+nav.guilds__2b93a[aria-label="Servers sidebar"] .childWrapper__01b9c .wrapperSimple_a34580,
+nav.guilds__2b93a[aria-label="Servers sidebar"] .childWrapper__01b9c .wrapper_d281dd,
+nav.guilds__2b93a[aria-label="Servers sidebar"] .childWrapper__01b9c .listItemWrapper__1f93b,
+nav.guilds__2b93a[aria-label="Servers sidebar"] .childWrapper__01b9c svg,
+nav.guilds__2b93a[aria-label="Servers sidebar"] .folderIconWrapper__72239 foreignObject,
+nav.guilds__2b93a[aria-label="Servers sidebar"] .folderIconWrapper__72239 .wrapperSimple_a34580,
+nav.guilds__2b93a[aria-label="Servers sidebar"] .folderIconWrapper__72239 .wrapper_d281dd,
+nav.guilds__2b93a[aria-label="Servers sidebar"] .folderIconWrapper__72239 .listItemWrapper__1f93b,
+nav.guilds__2b93a[aria-label="Servers sidebar"] .folderIconWrapper__72239 svg,
+nav.guilds__2b93a[aria-label="Servers sidebar"] .wrapper_a54cba foreignObject,
+nav.guilds__2b93a[aria-label="Servers sidebar"] .wrapper_a54cba .wrapperSimple_a34580,
+nav.guilds__2b93a[aria-label="Servers sidebar"] .wrapper_a54cba .wrapper_d281dd,
+nav.guilds__2b93a[aria-label="Servers sidebar"] .wrapper_a54cba .listItemWrapper__1f93b,
+nav.guilds__2b93a[aria-label="Servers sidebar"] .wrapper_a54cba svg,
+nav.guilds__2b93a[aria-label="Servers sidebar"] .target__47b05 .tutorialContainer_dc6fde foreignObject,
+nav.guilds__2b93a[aria-label="Servers sidebar"] .target__47b05 .tutorialContainer_dc6fde .wrapperSimple_a34580,
+nav.guilds__2b93a[aria-label="Servers sidebar"] .target__47b05 .tutorialContainer_dc6fde .wrapper_d281dd,
+nav.guilds__2b93a[aria-label="Servers sidebar"] .target__47b05 .tutorialContainer_dc6fde .listItemWrapper__1f93b,
+nav.guilds__2b93a[aria-label="Servers sidebar"] .target__47b05 .tutorialContainer_dc6fde svg,
+nav.guilds__2b93a[aria-label="Servers sidebar"] .tutorialContainer__890ea foreignObject,
+nav.guilds__2b93a[aria-label="Servers sidebar"] .tutorialContainer__890ea .wrapperSimple_a34580,
+nav.guilds__2b93a[aria-label="Servers sidebar"] .tutorialContainer__890ea .wrapper_d281dd,
+nav.guilds__2b93a[aria-label="Servers sidebar"] .tutorialContainer__890ea .listItemWrapper__1f93b,
+nav.guilds__2b93a[aria-label="Servers sidebar"] .tutorialContainer__890ea svg {
+  width: calc(var(--gac-expanded-width) - 2 * var(--gac-padding)) !important;
+  max-width: calc(var(--gac-expanded-width) - 2 * var(--gac-padding)) !important;
+  min-width: calc(var(--gac-expanded-width) - 2 * var(--gac-padding)) !important;
+  transition: max-width 0.25s ease, min-width 0.25s ease, width 0.25s ease;
+  transition-delay: var(--gac-transition-delay);
+}
+nav.guilds__2b93a[aria-label="Servers sidebar"] .circleIconButton_d8df29 foreignObject,
+nav.guilds__2b93a[aria-label="Servers sidebar"] .listItem_fa7b36 foreignObject,
+nav.guilds__2b93a[aria-label="Servers sidebar"] .wrapper__3af0b foreignObject,
+nav.guilds__2b93a[aria-label="Servers sidebar"] .childWrapper__01b9c foreignObject,
+nav.guilds__2b93a[aria-label="Servers sidebar"] .folderIconWrapper__72239 foreignObject,
+nav.guilds__2b93a[aria-label="Servers sidebar"] .wrapper_a54cba foreignObject,
+nav.guilds__2b93a[aria-label="Servers sidebar"] .target__47b05 .tutorialContainer_dc6fde foreignObject,
+nav.guilds__2b93a[aria-label="Servers sidebar"] .tutorialContainer__890ea foreignObject {
+  transform: translateX(-4px);
+  transition: max-width 0.25s ease, min-width 0.25s ease, width 0.25s ease, transform 0.25s ease;
+  transition-delay: var(--gac-transition-delay);
+}
+nav.guilds__2b93a[aria-label="Servers sidebar"] svg > foreignObject > .wrapper_d281dd,
+nav.guilds__2b93a[aria-label="Servers sidebar"] div[aria-label="Direct Messages"] .childWrapper__01b9c,
+nav.guilds__2b93a[aria-label="Servers sidebar"] .circleIconButton_d8df29 {
+  display: inline-block;
+  padding-left: var(--gac-padding) !important;
+  line-height: 48px !important;
+  vertical-align: middle;
+}
+nav.guilds__2b93a[aria-label="Servers sidebar"] .pill__6b31b,
+nav.guilds__2b93a[aria-label="Servers sidebar"] .pill_d1140c {
+  left: -8px !important;
+}
+nav.guilds__2b93a[aria-label="Servers sidebar"] .listItem_fa7b36 {
+  display: block !important;
+  position: relative !important;
+  margin-left: var(--gac-padding) !important;
+  margin-bottom: 0 !important;
+}
+nav.guilds__2b93a[aria-label="Servers sidebar"] .listItem_fa7b36 > div[draggable=true]:hover,
+nav.guilds__2b93a[aria-label="Servers sidebar"] .listItem_fa7b36 .circleIconButton_d8df29:hover,
+nav.guilds__2b93a[aria-label="Servers sidebar"] .listItem_fa7b36 div[data-list-item-id=guildsnav___home]:hover,
+nav.guilds__2b93a[aria-label="Servers sidebar"] .listItem_fa7b36 .wrapper_d281dd:hover {
+  --gac-text-color: var(--gac-text-hover-color);
+}
+nav.guilds__2b93a[aria-label="Servers sidebar"] .listItem_fa7b36 > div[draggable=true]::after,
+nav.guilds__2b93a[aria-label="Servers sidebar"] .listItem_fa7b36 .circleIconButton_d8df29::after,
+nav.guilds__2b93a[aria-label="Servers sidebar"] .listItem_fa7b36 div[data-list-item-id=guildsnav___home]::after,
+nav.guilds__2b93a[aria-label="Servers sidebar"] .listItem_fa7b36 .wrapper_d281dd::after {
+  white-space: nowrap;
+  width: calc(var(--gac-expanded-width) - var(--gac-collapse-width) - var(--gac-padding));
+  max-width: calc(var(--gac-expanded-width) - var(--gac-collapse-width) - var(--gac-padding));
+  min-width: calc(var(--gac-expanded-width) - var(--gac-collapse-width) - var(--gac-padding));
+  overflow: hidden;
+  text-overflow: ellipsis;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: calc(7 * var(--gac-padding));
+  color: var(--gac-text-color);
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: 500;
+  pointer-events: none;
+  font-family: inherit;
+  max-width: 0;
+  opacity: 0;
+  transition: max-width 0.25s ease, min-width 0.25s ease, opacity 0.5s ease;
+  transition-delay: var(--gac-transition-delay);
+}
+nav.guilds__2b93a[aria-label="Servers sidebar"] .listItem_fa7b36 img {
+  display: inline-block !important;
+  vertical-align: middle !important;
+  line-height: 48px !important;
+  margin-left: 4px !important;
+  width: 32px !important;
+  height: 32px !important;
+  border-radius: 50% !important;
+}
+nav.guilds__2b93a[aria-label="Servers sidebar"] .listItem_fa7b36 div[aria-label="Direct Messages"] svg[role=img],
+nav.guilds__2b93a[aria-label="Servers sidebar"] .listItem_fa7b36 .circleIconButton_d8df29 svg[role=img] {
+  display: inline-block !important;
+  vertical-align: middle !important;
+  line-height: 48px !important;
+  width: 26px !important;
+  min-width: 26px !important;
+  max-width: 26px !important;
+  height: 26px !important;
+  min-height: 26px !important;
+  filter: brightness(0.75) !important;
+}
+nav.guilds__2b93a[aria-label="Servers sidebar"] .listItem_fa7b36 .circleIconButton_d8df29 svg[role=img] {
+  margin-left: 6px !important;
+}
+nav.guilds__2b93a[aria-label="Servers sidebar"] .listItem_fa7b36 .circleIconButton_d8df29::after {
+  content: attr(aria-label);
+}
+nav.guilds__2b93a[aria-label="Servers sidebar"] .listItem_fa7b36 div[data-list-item-id=guildsnav___home]::after {
+  content: attr(aria-label);
+}
+nav.guilds__2b93a[aria-label="Servers sidebar"] .listItem_fa7b36 .wrapper_d281dd::after {
+  content: attr(aria-label);
+}
+nav.guilds__2b93a[aria-label="Servers sidebar"] .listItem_fa7b36 > div[draggable=true]::after {
+  content: attr(data-dnd-name);
+}
+nav.guilds__2b93a[aria-label="Servers sidebar"] .listItem_fa7b36 > div[draggable=true]:hover::before {
+  filter: var(--gac-image-filter) brightness(var(--gac-image-hover-brightness));
+}
+nav.guilds__2b93a[aria-label="Servers sidebar"] .listItem_fa7b36 > div[draggable=true]::before {
+  filter: var(--gac-image-filter);
+  content: "";
+  width: 36px;
+  height: 36px;
+  background-size: 36px;
+  background-position: center;
+  position: absolute;
+  left: calc(3 * var(--gac-padding) + var(--gac-padding) / 2);
+  top: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 99;
+  pointer-events: none;
+}
+nav.guilds__2b93a[aria-label="Servers sidebar"] .listItem_fa7b36 > div[draggable=true][data-dnd-name=IRL]::before {
+  background-image: url(https://pinpal.github.io/imageDump/IRL.png);
+}
+nav.guilds__2b93a[aria-label="Servers sidebar"] .listItem_fa7b36 > div[draggable=true][data-dnd-name=CS]:before {
+  background-image: url(https://pinpal.github.io/imageDump/CS.png);
+}
+nav.guilds__2b93a[aria-label="Servers sidebar"] .listItem_fa7b36 > div[draggable=true][data-dnd-name=Tarkov]:before {
+  background-image: url(https://pinpal.github.io/imageDump/EFT.png);
+}
+nav.guilds__2b93a[aria-label="Servers sidebar"] .listItem_fa7b36 > div[draggable=true][data-dnd-name=Valorant]:before {
+  background-image: url(https://pinpal.github.io/imageDump/Val.png);
+}
+nav.guilds__2b93a[aria-label="Servers sidebar"] .listItem_fa7b36 > div[draggable=true][data-dnd-name=MC]:before {
+  background-image: url(https://pinpal.github.io/imageDump/MC_Alt.png);
+}
+nav.guilds__2b93a[aria-label="Servers sidebar"] .listItem_fa7b36 > div[draggable=true][data-dnd-name=Modded]:before {
+  background-image: url(https://pinpal.github.io/imageDump/MC_Alt.png);
+}
+nav.guilds__2b93a[aria-label="Servers sidebar"] .listItem_fa7b36 > div[draggable=true][data-dnd-name=iOS]:before {
+  background-image: url(https://pinpal.github.io/imageDump/Jailbreak.png);
+}
+nav.guilds__2b93a[aria-label="Servers sidebar"] .listItem_fa7b36 > div[draggable=true][data-dnd-name=Keyboards]:before {
+  background-image: url(https://pinpal.github.io/imageDump/Keyboards.png);
+}
+nav.guilds__2b93a[aria-label="Servers sidebar"] .listItem_fa7b36 > div[draggable=true][data-dnd-name=Computing]:before {
+  background-image: url(https://pinpal.github.io/imageDump/PC.png);
+}
+nav.guilds__2b93a[aria-label="Servers sidebar"] .listItem_fa7b36 > div[draggable=true][data-dnd-name=Programming]:before {
+  background-image: url(https://pinpal.github.io/imageDump/Programming.png);
+}
+nav.guilds__2b93a[aria-label="Servers sidebar"] .listItem_fa7b36 > div[draggable=true][data-dnd-name=COD]:before {
+  background-image: url(https://pinpal.github.io/imageDump/COD.png);
+}
+nav.guilds__2b93a[aria-label="Servers sidebar"] .listItem_fa7b36 .closedFolderIconWrapper__7321f,
+nav.guilds__2b93a[aria-label="Servers sidebar"] .listItem_fa7b36 .expandedFolderIconWrapper__458cf {
+  visibility: hidden;
+}
+
+nav.guilds__2b93a[aria-label="Servers sidebar"]:hover {
+  --gac-expanded-width: 220px;
+  --gac-transition-delay: 0s;
+}
+nav.guilds__2b93a[aria-label="Servers sidebar"]:hover .listItem_fa7b36 > div[draggable=true]::after,
+nav.guilds__2b93a[aria-label="Servers sidebar"]:hover .listItem_fa7b36 .circleIconButton_d8df29::after,
+nav.guilds__2b93a[aria-label="Servers sidebar"]:hover .listItem_fa7b36 div[data-list-item-id=guildsnav___home]::after,
+nav.guilds__2b93a[aria-label="Servers sidebar"]:hover .listItem_fa7b36 .wrapper_d281dd::after {
+  max-width: calc(var(--gac-expanded-width) - var(--gac-collapse-width) - 1.5 * var(--gac-padding));
+  opacity: 1;
+}
+nav.guilds__2b93a[aria-label="Servers sidebar"]:hover .circleIconButton_d8df29 foreignObject,
+nav.guilds__2b93a[aria-label="Servers sidebar"]:hover .listItem_fa7b36 foreignObject,
+nav.guilds__2b93a[aria-label="Servers sidebar"]:hover .wrapper__3af0b foreignObject,
+nav.guilds__2b93a[aria-label="Servers sidebar"]:hover .childWrapper__01b9c foreignObject,
+nav.guilds__2b93a[aria-label="Servers sidebar"]:hover .folderIconWrapper__72239 foreignObject,
+nav.guilds__2b93a[aria-label="Servers sidebar"]:hover .tutorialContainer_dc6fde foreignObject,
+nav.guilds__2b93a[aria-label="Servers sidebar"]:hover .tutorialContainer__890ea foreignObject {
+  transform: translateX(-78px);
+}
+
+/*# sourceMappingURL=main.css.map */
