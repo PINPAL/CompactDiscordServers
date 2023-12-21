@@ -22,9 +22,12 @@
 }
 .custom-theme-background.theme-light {
   --gac-box-color: rgba(255, 255, 255, 0.4);
+  --gac-hover-color-overlay: rgba(255, 255, 255, 1);
+  --gac-hover-color: rgba(0, 0, 0, 0.1);
 }
 
 .theme-light {
+  --gac-accent-color: #5cb3ff;
   --gac-image-filter: invert(1);
   --gac-image-hover-brightness: 0.1;
 }
@@ -282,7 +285,7 @@ nav.guilds__2b93a[aria-label="Servers sidebar"] .listItem_fa7b36 .circleIconButt
   max-width: 26px !important;
   height: 26px !important;
   min-height: 26px !important;
-  filter: brightness(0.75) !important;
+  filter: var(--gac-image-filter) !important;
 }
 nav.guilds__2b93a[aria-label="Servers sidebar"] .listItem_fa7b36 .circleIconButton_d8df29 svg[role=img] {
   margin-left: 6px !important;
