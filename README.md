@@ -7,6 +7,7 @@ Menu expands when hovering over the regular sidebar.
 # Requirements
 
 [OpenASAR](https://openasar.dev/) - Discord CSS Injector
+
 Or any other CSS Injector such as [BetterDiscord](https://betterdiscord.app/)
 
 # Installation
