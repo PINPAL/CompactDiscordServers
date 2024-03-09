@@ -42,6 +42,16 @@
 	display: block !important;
 }
 
+// Hide Shop & Nitro in Private messages Sidebar
+div[data-list-id="private-channels-uid_18"] > ul[aria-label="Direct Messages"] {
+	& > li:has(*[href="/shop"]) {
+		display: none !important;
+	}
+	& > li:has(*[href="/store"]) {
+		display: none !important;
+	}
+}
+
 // Server List
 nav.guilds__2b93a[aria-label="Servers sidebar"] {
 	width: var(--gac-expanded-width) !important;
