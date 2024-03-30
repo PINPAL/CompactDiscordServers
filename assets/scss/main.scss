@@ -38,12 +38,12 @@
 // --background-secondary: #2b2d31;
 
 // Always show now playing column
-.nowPlayingColumn_f5023f {
+.nowPlayingColumn_b025fe {
 	display: block !important;
 }
 
 // Hide Shop & Nitro in Private messages Sidebar
-div[data-list-id="private-channels-uid_18"] > ul[aria-label="Direct Messages"] {
+div[data-list-id="private-channels-uid_184"] > ul[aria-label="Direct Messages"] {
 	& > li:has(*[href="/shop"]) {
 		display: none !important;
 	}
@@ -65,7 +65,7 @@ nav.guilds__2b93a[aria-label="Servers sidebar"] {
 	transition: max-width 0.25s ease, min-width 0.25s ease;
 	transition-delay: var(--gac-transition-delay);
 
-	.expandedFolderBackground__1bec6 {
+	.expandedFolderBackground_b1385f {
 		background: var(--gac-box-color) !important;
 		width: calc(var(--gac-expanded-width) - 2 * var(--gac-padding)) !important;
 		max-width: calc(var(--gac-expanded-width) - 2 * var(--gac-padding)) !important;
@@ -90,7 +90,7 @@ nav.guilds__2b93a[aria-label="Servers sidebar"] {
 			border-radius: var(--gac-border-radius) var(--gac-border-radius) 0 0;
 		}
 
-		&.collapsed__0a270 {
+		&.collapsed__98ad5 {
 			&::before {
 				background: none;
 			}
@@ -101,9 +101,9 @@ nav.guilds__2b93a[aria-label="Servers sidebar"] {
 		}
 	}
 	// Container for folders
-	.wrapper_ed1dea {
+	.wrapper__832f2 {
 		&:hover {
-			.expandedFolderBackground__1bec6.collapsed__0a270 {
+			.expandedFolderBackground_b1385f.collapsed__98ad5 {
 				background: var(--gac-hover-color) !important;
 			}
 		}
@@ -114,25 +114,25 @@ nav.guilds__2b93a[aria-label="Servers sidebar"] {
 	}
 
 	// Folder Background
-	.folderIconWrapper__72239,
+	.folderIconWrapper__11165,
 	.folder__17546, 
     // CircleIconButton Background
-    .circleIconButton_d8df29,
+    .circleIconButton__05cf2,
     // Home Button Background
-    .childWrapper__01b9c {
+    .childWrapper_a6ce15 {
 		background: none !important;
 	}
 
 	// Fake Background
 	// ===============
 	// CircleIconButton Background
-	.circleIconButton_d8df29,
+	.circleIconButton__05cf2,
     // Home Button Background
-    .childWrapper__01b9c,
+    .childWrapper_a6ce15,
     // Servers in folders
-    .wrapper_ed1dea ul > .listItem_fa7b36 foreignObject > div,
+    .wrapper__832f2 ul > .listItem__48528 foreignObject > div,
     // Servers not in folder
-    div[aria-label="Servers"] > .listItem_fa7b36 foreignObject > div {
+    div[aria-label="Servers"] > .listItem__48528 foreignObject > div {
 		&:hover {
 			--gac-box-color: var(--gac-hover-color);
 			--gac-text-color: var(--gac-text-hover-color);
@@ -159,7 +159,7 @@ nav.guilds__2b93a[aria-label="Servers sidebar"] {
 		}
 	}
 	// Servers in folder override (for theme support)
-	.wrapper_ed1dea ul > .listItem_fa7b36 foreignObject > div {
+	.wrapper__832f2 ul > .listItem__48528 foreignObject > div {
 		--gac-box-color: none;
 		&:hover {
 			--gac-box-color: var(--gac-hover-color-overlay);
@@ -168,7 +168,9 @@ nav.guilds__2b93a[aria-label="Servers sidebar"] {
 
 	.selected_ad2d13,
 	.selected_f5ec8e,
-	.selected__98d51 {
+	.selected__98d51,
+	.selected_ae80f7,
+	.selected_e85eba {
 		--gac-box-color: var(--gac-accent-color);
 		--gac-text-color: var(--gac-text-hover-color);
 	}
@@ -179,33 +181,34 @@ nav.guilds__2b93a[aria-label="Servers sidebar"] {
 	}
 
 	// Random crap in sidebar eg: discover, download apps and nitro etc
-	.scrollerBase__2b744 > .listItem_fa7b36 {
+	.scrollerBase__65223 > .listItem__48528 {
 		display: none !important;
 	}
 
 	// Things directly within the container
 	div[aria-label="Servers"],
-	.scrollerBase__2b744 {
-		& > .tutorialContainer__890ea,
-		& > .listItem_fa7b36,
-		& > .wrapper_ed1dea,
-		& > .tutorialContainer_dc6fde {
+	.scrollerBase__65223 {
+		& > .tutorialContainer_b06ae6,  // home button
+		& > .listItem__48528,           // discover servers
+		& > .wrapper__832f2,            //
+		& > .tutorialContainer__6835f   // create server
+		{
 			margin-bottom: var(--gac-padding) !important;
 		}
 	}
 
 	// adjust width of various things
-	.circleIconButton_d8df29,
-	.listItem_fa7b36,
+	.circleIconButton__05cf2,
+	.listItem__48528,
 	.wrapper__3af0b,
-	.childWrapper__01b9c,
-	.folderIconWrapper__72239,
+	.childWrapper_a6ce15,
+	.folderIconWrapper__11165,
     // for dragging stuff around
     .wrapper_a54cba,
     .target__47b05
     // other buttons 
-	.tutorialContainer_dc6fde,
-	.tutorialContainer__890ea {
+	.tutorialContainer__6835f,
+	.tutorialContainer_b06ae6 {
 		width: calc(var(--gac-expanded-width) - 2 * var(--gac-padding)) !important;
 		max-width: calc(var(--gac-expanded-width) - 2 * var(--gac-padding)) !important;
 		min-width: calc(var(--gac-expanded-width) - 2 * var(--gac-padding)) !important;
@@ -215,7 +218,7 @@ nav.guilds__2b93a[aria-label="Servers sidebar"] {
 
 		foreignObject,
 		.wrapperSimple_a34580,
-		.wrapper_d281dd,
+		.wrapper__8436d,
 		.listItemWrapper__1f93b,
 		svg {
 			width: calc(var(--gac-expanded-width) - 2 * var(--gac-padding)) !important;
@@ -235,11 +238,11 @@ nav.guilds__2b93a[aria-label="Servers sidebar"] {
 	}
 
 	// Server inside folder
-	svg > foreignObject > .wrapper_d281dd ,
+	svg > foreignObject > .wrapper__8436d ,
     // Home Button
-	div[aria-label="Direct Messages"] .childWrapper__01b9c ,
+	div[aria-label="Direct Messages"] .childWrapper_a6ce15 ,
     // Circle Icon Button
-   .circleIconButton_d8df29 {
+   .circleIconButton__05cf2 {
 		display: inline-block;
 		padding-left: var(--gac-padding) !important;
 		line-height: 48px !important;
@@ -252,7 +255,7 @@ nav.guilds__2b93a[aria-label="Servers sidebar"] {
 		left: -8px !important;
 	}
 
-	.listItem_fa7b36 {
+	.listItem__48528 {
 		display: block !important;
 		position: relative !important;
 		margin-left: var(--gac-padding) !important;
@@ -260,9 +263,9 @@ nav.guilds__2b93a[aria-label="Servers sidebar"] {
 
 		// Name Text
 		& > div[draggable="true"],
-		.circleIconButton_d8df29,
+		.circleIconButton__05cf2,
 		div[data-list-item-id="guildsnav___home"],
-		.wrapper_d281dd {
+		.wrapper__8436d {
 			&:hover {
 				--gac-text-color: var(--gac-text-hover-color);
 			}
@@ -305,7 +308,7 @@ nav.guilds__2b93a[aria-label="Servers sidebar"] {
 		// Home Icon
 		div[aria-label="Direct Messages"] ,
         // Circle Icon Button
-        .circleIconButton_d8df29 {
+        .circleIconButton__05cf2 {
 			svg[role="img"] {
 				display: inline-block !important;
 				vertical-align: middle !important;
@@ -318,14 +321,14 @@ nav.guilds__2b93a[aria-label="Servers sidebar"] {
 				filter: var(--gac-image-filter) !important;
 			}
 		}
-		.circleIconButton_d8df29 {
+		.circleIconButton__05cf2 {
 			svg[role="img"] {
 				margin-left: 6px !important;
 			}
 		}
 
 		// Circle Icon Button
-		.circleIconButton_d8df29::after {
+		.circleIconButton__05cf2::after {
 			content: attr(aria-label);
 		}
 		// Home Button
@@ -333,7 +336,7 @@ nav.guilds__2b93a[aria-label="Servers sidebar"] {
 			content: attr(aria-label);
 		}
 		// DM Notifications
-		.wrapper_d281dd::after {
+		.wrapper__8436d::after {
 			content: attr(aria-label);
 		}
 		// Folder
@@ -398,23 +401,23 @@ nav.guilds__2b93a[aria-label="Servers sidebar"] {
 				background-image: url(https://pinpal.github.io/imageDump/COD.png);
 			}
 		}
-		.closedFolderIconWrapper__7321f,
-		.expandedFolderIconWrapper__458cf {
+		.closedFolderIconWrapper__722d5,
+		.expandedFolderIconWrapper__324c1 {
 			visibility: hidden;
 		}
 	}
 }
 
 // Hover Effects
-nav.guilds__2b93a[aria-label="Servers sidebar"]:hover {
+html.app-focused nav[aria-label="Servers sidebar"]:hover {
 	--gac-expanded-width: 220px;
 	--gac-transition-delay: 0s;
-	.listItem_fa7b36 {
+	.listItem__48528 {
 		// Name Text
 		& > div[draggable="true"]::after, // Folder
-		.circleIconButton_d8df29::after, // Circle Icon Button
+		.circleIconButton__05cf2::after, // Circle Icon Button
 		div[data-list-item-id="guildsnav___home"]::after, // Home Button
-		.wrapper_d281dd::after // DM Notifications & Servers
+		.wrapper__8436d::after // DM Notifications & Servers
 		{
 			max-width: calc(var(--gac-expanded-width) - var(--gac-collapse-width) - 1.5 * var(--gac-padding));
 			opacity: 1;
@@ -422,13 +425,13 @@ nav.guilds__2b93a[aria-label="Servers sidebar"]:hover {
 	}
 
 	// adjust width of various things
-	.circleIconButton_d8df29,
-	.listItem_fa7b36,
+	.circleIconButton__05cf2,
+	.listItem__48528,
 	.wrapper__3af0b,
-	.childWrapper__01b9c,
-	.folderIconWrapper__72239,
-	.tutorialContainer_dc6fde,
-	.tutorialContainer__890ea {
+	.childWrapper_a6ce15,
+	.folderIconWrapper__11165,
+	.tutorialContainer__6835f,
+	.tutorialContainer_b06ae6 {
 		// FIXME: WHAT IN THE ACTUAL FUCK IS GOING ON HERE????
 		foreignObject {
 			transform: translateX(-78px);
