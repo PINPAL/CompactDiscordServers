@@ -65,12 +65,8 @@ nav.guilds__2b93a[aria-label="Servers sidebar"] {
 	transition: max-width 0.25s ease, min-width 0.25s ease;
 	transition-delay: var(--gac-transition-delay);
 
-	* {
-		width: unset;
-		border-radius: unset;
-	}
-	mask {
-		display: none !important;
+	foreignObject {
+		mask: none !important;
 	}
 
 	.expandedFolderBackground_b1385f {
