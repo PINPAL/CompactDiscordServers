@@ -38,22 +38,28 @@
 // --background-secondary: #2b2d31;
 
 // Always show now playing column
-.nowPlayingColumn_b025fe {
+main[aria-label="Friends"] div[class*="nowPlayingColumn_"] {
 	display: block !important;
 }
 
 // Hide Shop & Nitro in Private messages Sidebar
-div[data-list-id="private-channels-uid_184"] > ul[aria-label="Direct Messages"] {
-	& > li:has(*[href="/shop"]) {
-		display: none !important;
-	}
-	& > li:has(*[href="/store"]) {
-		display: none !important;
+nav[aria-label="Private channels"] {
+	& > div[class*="scrollerBase_"] {
+		& > ul[aria-label="Direct Messages"] {
+			// Shop
+			& > li:has(a[href$="/shop"]) {
+				display: none !important;
+			}
+			// Nitro
+			& > li:has(a[href$="/store"]) {
+				display: none !important;
+			}
+		}
 	}
 }
 
 // Server List
-nav.guilds__2b93a[aria-label="Servers sidebar"] {
+nav[aria-label="Servers sidebar"] {
 	width: var(--gac-expanded-width) !important;
 	max-width: var(--gac-expanded-width) !important;
 	min-width: var(--gac-expanded-width) !important;
@@ -69,7 +75,7 @@ nav.guilds__2b93a[aria-label="Servers sidebar"] {
 		mask: none !important;
 	}
 
-	.expandedFolderBackground_b1385f {
+	span[class*="expandedFolderBackground_"] {
 		background: var(--gac-box-color) !important;
 		width: calc(var(--gac-expanded-width) - 2 * var(--gac-padding)) !important;
 		max-width: calc(var(--gac-expanded-width) - 2 * var(--gac-padding)) !important;
@@ -94,7 +100,7 @@ nav.guilds__2b93a[aria-label="Servers sidebar"] {
 			border-radius: var(--gac-border-radius) var(--gac-border-radius) 0 0;
 		}
 
-		&.collapsed__98ad5 {
+		&[class*="collapsed_"] {
 			&::before {
 				background: none;
 			}
@@ -104,39 +110,42 @@ nav.guilds__2b93a[aria-label="Servers sidebar"] {
 			}
 		}
 	}
-	// Container for folders
-	.wrapper__832f2 {
-		&:hover {
-			.expandedFolderBackground_b1385f.collapsed__98ad5 {
-				background: var(--gac-hover-color) !important;
+
+	div[aria-label="Servers"] {
+		// Container for folders
+		& > div[class*="wrapper_"] {
+			&:hover {
+				span[class*="expandedFolderBackground_"][class*="collapsed"] {
+					background: var(--gac-hover-color) !important;
+				}
 			}
-		}
-		// Folder items
-		ul {
-			height: fit-content !important;
+			// Folder items
+			ul {
+				height: fit-content !important;
+			}
 		}
 	}
 
 	// Folder Background
-	.folderIconWrapper__11165,
-	.folder__17546, 
+	div[class^="folderIconWrapper_"],
+	div[class^="folder_"], 
     // CircleIconButton Background
-    .circleIconButton__05cf2,
+    div[class*="circleIconButton_"],
     // Home Button Background
-    .childWrapper_a6ce15 {
+    div[class*="tutorialContainer_"] div[data-list-item-id="guildsnav___home"] div[class*="childWrapper_"] {
 		background: none !important;
 	}
 
 	// Fake Background
 	// ===============
 	// CircleIconButton Background
-	.circleIconButton__05cf2,
-    // Home Button Background
-    .childWrapper_a6ce15,
+	div[class*="circleIconButton_"],
+    // Home Button (Direct Messages)
+    div[class*="tutorialContainer_"] div[data-list-item-id="guildsnav___home"] div[class*="childWrapper_"],
     // Servers in folders
-    .wrapper__832f2 ul > .listItem__48528 foreignObject > div,
+    div[aria-label="Servers"] > div[class*="wrapper_"] ul > div[class*="listItem_"] foreignObject > div,
     // Servers not in folder
-    div[aria-label="Servers"] > .listItem__48528 foreignObject > div {
+    div[aria-label="Servers"] > div[class*="listItem_"] foreignObject > div {
 		&:hover {
 			--gac-box-color: var(--gac-hover-color);
 			--gac-text-color: var(--gac-text-hover-color);
@@ -163,58 +172,47 @@ nav.guilds__2b93a[aria-label="Servers sidebar"] {
 		}
 	}
 	// Servers in folder override (for theme support)
-	.wrapper__832f2 ul > .listItem__48528 foreignObject > div {
+	div[class*="wrapper_"] ul > div[class*="listItem_"] foreignObject > div {
 		--gac-box-color: none;
 		&:hover {
 			--gac-box-color: var(--gac-hover-color-overlay);
 		}
 	}
 
-	.selected_ad2d13,
-	.selected_f5ec8e,
-	.selected__98d51,
-	.selected_ae80f7,
-	.selected_e85eba {
+	*[class*="selected_"] {
 		--gac-box-color: var(--gac-accent-color);
 		--gac-text-color: var(--gac-text-hover-color);
 	}
 
 	// Circle Icon Button
-	.wrapperSimple__9e2b0 {
+	div[class*="wrapperSimple_"] {
 		border-radius: unset !important;
 	}
 
 	// Random crap in sidebar eg: discover, download apps and nitro etc
-	.scrollerBase__65223 > .listItem__48528 {
+	ul > div[class*="scrollerBase_"] > div[class*="listItem_"] {
 		display: none !important;
 	}
 
 	// Things directly within the container
 	div[aria-label="Servers"],
-	.scrollerBase__65223 {
-		& > .tutorialContainer_b06ae6,  // home button
-		& > .listItem__48528,           // discover servers
-		& > .wrapper__832f2,            // folders
-		& > .tutorialContainer__6835f   // create server
+	div[class*="scrollerBase_"] {
+		& > div[class*="tutorialContainer_"], // Home Button & Create Server button
+		& > div[class*="listItem_"],          // discover servers
+		& > div[class*="wrapper_"]            // folders
 		{
 			margin-bottom: var(--gac-padding) !important;
 		}
 	}
 
 	// adjust width of various things
-	.circleIconButton__05cf2,
-	.listItem__48528,
-	.wrapper__3af0b,
-    .wrapper__832f2,
-    .wrapper__9916c,
-	.childWrapper_a6ce15,
-	.folderIconWrapper__11165,
-    // for dragging stuff around
-    .wrapper_a54cba,
-    .target__47b05
-    // other buttons 
-	.tutorialContainer__6835f,
-	.tutorialContainer_b06ae6 {
+	div[class*="circleIconButton_"],
+	div[class*="listItem_"],
+	div[class*="wrapper_"],
+	div[class*="childWrapper_"],
+	div[class*="folderIconWrapper_"],
+	div[class*="target_"],
+	div[class*="tutorialContainer_"] {
 		width: calc(var(--gac-expanded-width) - 2 * var(--gac-padding)) !important;
 		max-width: calc(var(--gac-expanded-width) - 2 * var(--gac-padding)) !important;
 		min-width: calc(var(--gac-expanded-width) - 2 * var(--gac-padding)) !important;
@@ -223,9 +221,9 @@ nav.guilds__2b93a[aria-label="Servers sidebar"] {
 		transition-delay: var(--gac-transition-delay);
 
 		foreignObject,
-		.wrapperSimple_a34580,
-		.wrapper__8436d,
-		.listItemWrapper__1f93b,
+		div[class*="wrapperSimple_"],
+		div[class*="wrapper_"],
+		div[class*="listItemWrapper_"],
 		svg {
 			width: calc(var(--gac-expanded-width) - 2 * var(--gac-padding)) !important;
 			max-width: calc(var(--gac-expanded-width) - 2 * var(--gac-padding)) !important;
@@ -244,11 +242,11 @@ nav.guilds__2b93a[aria-label="Servers sidebar"] {
 	}
 
 	// Server inside folder
-	svg > foreignObject > .wrapper__8436d ,
+	svg > foreignObject > div[class*="wrapper_"],
     // Home Button
-	div[aria-label="Direct Messages"] .childWrapper_a6ce15 ,
+	div[aria-label="Direct Messages"] div[class*="childWrapper_"],
     // Circle Icon Button
-   .circleIconButton__05cf2 {
+    div[class*="circleIconButton_"] {
 		display: inline-block;
 		padding-left: var(--gac-padding) !important;
 		line-height: 48px !important;
@@ -256,12 +254,11 @@ nav.guilds__2b93a[aria-label="Servers sidebar"] {
 	}
 
 	// Pill
-	.pill__6b31b,
-	.pill_d1140c {
+	div[class*="pill_"] {
 		left: -8px !important;
 	}
 
-	.listItem__48528 {
+	div[class*="listItem_"] {
 		display: block !important;
 		position: relative !important;
 		margin-left: var(--gac-padding) !important;
@@ -269,9 +266,9 @@ nav.guilds__2b93a[aria-label="Servers sidebar"] {
 
 		// Name Text
 		& > div[draggable="true"],
-		.circleIconButton__05cf2,
+		div[class*="circleIconButton_"],
 		div[data-list-item-id="guildsnav___home"],
-		.wrapper__8436d {
+		div[class*="wrapper_"] {
 			&:hover {
 				--gac-text-color: var(--gac-text-hover-color);
 			}
@@ -314,7 +311,7 @@ nav.guilds__2b93a[aria-label="Servers sidebar"] {
 		// Home Icon
 		div[aria-label="Direct Messages"] ,
         // Circle Icon Button
-        .circleIconButton__05cf2 {
+        div[class*="circleIconButton_"] {
 			svg[role="img"] {
 				display: inline-block !important;
 				vertical-align: middle !important;
@@ -327,14 +324,14 @@ nav.guilds__2b93a[aria-label="Servers sidebar"] {
 				filter: var(--gac-image-filter) !important;
 			}
 		}
-		.circleIconButton__05cf2 {
+		div[class*="circleIconButton_"] {
 			svg[role="img"] {
 				margin-left: 6px !important;
 			}
 		}
 
 		// Circle Icon Button
-		.circleIconButton__05cf2::after {
+		div[class*="circleIconButton_"]::after {
 			content: attr(aria-label);
 		}
 		// Home Button
@@ -342,7 +339,7 @@ nav.guilds__2b93a[aria-label="Servers sidebar"] {
 			content: attr(aria-label);
 		}
 		// DM Notifications
-		.wrapper__8436d::after {
+		div[class*="wrapper_"]::after {
 			content: attr(aria-label);
 		}
 		// Folder
@@ -407,8 +404,8 @@ nav.guilds__2b93a[aria-label="Servers sidebar"] {
 				background-image: url(https://pinpal.github.io/imageDump/COD.png);
 			}
 		}
-		.closedFolderIconWrapper__722d5,
-		.expandedFolderIconWrapper__324c1 {
+		div[class*="closedFolderIconWrapper_"],
+		div[class*="expandedFolderIconWrapper_"] {
 			visibility: hidden;
 		}
 	}
@@ -418,12 +415,12 @@ nav.guilds__2b93a[aria-label="Servers sidebar"] {
 html.app-focused nav[aria-label="Servers sidebar"]:hover {
 	--gac-expanded-width: 220px;
 	--gac-transition-delay: 0s;
-	.listItem__48528 {
+	div[class*="listItem_"] {
 		// Name Text
 		& > div[draggable="true"]::after, // Folder
-		.circleIconButton__05cf2::after, // Circle Icon Button
+		div[class*="circleIconButton_"]::after, // Circle Icon Button
 		div[data-list-item-id="guildsnav___home"]::after, // Home Button
-		.wrapper__8436d::after // DM Notifications & Servers
+		div[class*="wrapper_"]::after // DM Notifications & Servers
 		{
 			max-width: calc(var(--gac-expanded-width) - var(--gac-collapse-width) - 1.5 * var(--gac-padding));
 			opacity: 1;
@@ -431,13 +428,12 @@ html.app-focused nav[aria-label="Servers sidebar"]:hover {
 	}
 
 	// adjust width of various things
-	.circleIconButton__05cf2,
-	.listItem__48528,
-	.wrapper__3af0b,
-	.childWrapper_a6ce15,
-	.folderIconWrapper__11165,
-	.tutorialContainer__6835f,
-	.tutorialContainer_b06ae6 {
+	div[class*="circleIconButton_"],
+	div[class*="listItem_"],
+	div[class*="wrapper_"],
+	div[class*="childWrapper_"],
+	div[class*="folderIconWrapper_"],
+	div[class*="tutorialContainer_"] {
 		// FIXME: WHAT IN THE ACTUAL FUCK IS GOING ON HERE????
 		foreignObject {
 			transform: translateX(-78px);
