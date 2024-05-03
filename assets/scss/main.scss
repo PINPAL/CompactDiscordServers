@@ -398,16 +398,19 @@ nav[aria-label="Servers sidebar"] {
 			&[data-dnd-name*="CS:GO"]:before,
 			&[data-dnd-name*="CSGO"]:before,
 			&[data-dnd-name*="CS GO"]:before,
-			& [data-dnd-name*="Counter Strike"]:before {
+			&[data-dnd-name*="Counter Strike"]:before {
 				background-image: url(https://pinpal.github.io/imageDump/CS.png);
 			}
 			&[data-dnd-name*="Tarkov"]:before,
-			&[data-dnd-name*="Escape from Tarkov"]:before {
+			&[data-dnd-name*="Escape from Tarkov"]:before,
+			&[data-dnd-name*="EFT"]:before,
+			&[data-dnd-name*="Eft"]:before {
 				background-image: url(https://pinpal.github.io/imageDump/EFT.png);
 			}
 			&[data-dnd-name*="Valorant"]:before,
 			&[data-dnd-name*="VAL"]:before,
-			&[data-dnd-name*="VALORANT"]:before {
+			&[data-dnd-name*="VALORANT"]:before,
+			&[data-dnd-name*="Val"]:before {
 				background-image: url(https://pinpal.github.io/imageDump/Val.png);
 			}
 			&[data-dnd-name*="MC"]:before,
@@ -416,8 +419,11 @@ nav[aria-label="Servers sidebar"] {
 			}
 			&[data-dnd-name*="Modded"]:before,
 			&[data-dnd-name*="Modding"]:before,
-			&[data-dnd-name*="Mods"]:before {
-				background-image: url(https://pinpal.github.io/imageDump/MC_Alt.png);
+			&[data-dnd-name*="Mods"]:before,
+			&[data-dnd-name*="Mod"]:before,
+			&[data-dnd-name*="Modpack"]:before,
+			&[data-dnd-name*="Modpacks"]:before {
+				background-image: url(https://pinpal.github.io/imageDump/Mods.png);
 			}
 			&[data-dnd-name*="iOS"]:before,
 			&[data-dnd-name*="Jailbreak"]:before,
@@ -444,13 +450,18 @@ nav[aria-label="Servers sidebar"] {
 				background-image: url(https://pinpal.github.io/imageDump/PC.png);
 			}
 			&[data-dnd-name*="Programming"]:before,
-			&[data-dnd-name*="Coding"]:before {
+			&[data-dnd-name*="Coding"]:before,
+			&[data-dnd-name*="Code"]:before,
+			&[data-dnd-name*="Software"]:before,
+			&[data-dnd-name*="Development"]:before {
 				background-image: url(https://pinpal.github.io/imageDump/Programming.png);
 			}
 			&[data-dnd-name*="COD"]:before,
 			&[data-dnd-name*="Call of Duty"]:before,
 			&[data-dnd-name*="CoD"]:before,
-			&[data-dnd-name*="Warzone"]:before {
+			&[data-dnd-name*="Warzone"]:before,
+			&[data-dnd-name*="MW"]:before,
+			&[data-dnd-name*="Modern Warfare"]:before {
 				background-image: url(https://pinpal.github.io/imageDump/COD.png);
 			}
 		}
