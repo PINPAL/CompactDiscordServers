@@ -370,37 +370,76 @@ nav[aria-label="Servers sidebar"] {
 			}
 
 			// Custom Icons
-			&[data-dnd-name="IRL"]::before {
+			&[data-dnd-name*="IRL"]::before,
+			&[data-dnd-name*="In Real Life"]::before,
+			&[data-dnd-name*="Real Life"]::before,
+			&[data-dnd-name*="Life"]::before,
+			&[data-dnd-name*="Friends"]::before,
+			&[data-dnd-name*="Friend"]::before,
+			&[data-dnd-name*="Friendship"]::before,
+			&[data-dnd-name*="Social"]::before,
+			&[data-dnd-name*="Socializing"]::before {
 				background-image: url(https://pinpal.github.io/imageDump/IRL.png);
 			}
-			&[data-dnd-name="CS"]:before {
+			&[data-dnd-name*="CS"]:before,
+			&[data-dnd-name*="Counter-Strike"]:before,
+			&[data-dnd-name*="Global Offensive"]:before,
+			&[data-dnd-name*="CS:GO"]:before,
+			&[data-dnd-name*="CSGO"]:before,
+			&[data-dnd-name*="CS GO"]:before,
+			& [data-dnd-name*="Counter Strike"]:before {
 				background-image: url(https://pinpal.github.io/imageDump/CS.png);
 			}
-			&[data-dnd-name="Tarkov"]:before {
+			&[data-dnd-name*="Tarkov"]:before,
+			&[data-dnd-name*="Escape from Tarkov"]:before {
 				background-image: url(https://pinpal.github.io/imageDump/EFT.png);
 			}
-			&[data-dnd-name="Valorant"]:before {
+			&[data-dnd-name*="Valorant"]:before,
+			&[data-dnd-name*="VAL"]:before,
+			&[data-dnd-name*="VALORANT"]:before {
 				background-image: url(https://pinpal.github.io/imageDump/Val.png);
 			}
-			&[data-dnd-name="MC"]:before {
+			&[data-dnd-name*="MC"]:before,
+			&[data-dnd-name*="Minecraft"]:before {
 				background-image: url(https://pinpal.github.io/imageDump/MC_Alt.png);
 			}
-			&[data-dnd-name="Modded"]:before {
+			&[data-dnd-name*="Modded"]:before,
+			&[data-dnd-name*="Modding"]:before,
+			&[data-dnd-name*="Mods"]:before {
 				background-image: url(https://pinpal.github.io/imageDump/MC_Alt.png);
 			}
-			&[data-dnd-name="iOS"]:before {
+			&[data-dnd-name*="iOS"]:before,
+			&[data-dnd-name*="Jailbreak"]:before,
+			&[data-dnd-name*="iPhone"]:before,
+			&[data-dnd-name*="iPad"]:before,
+			&[data-dnd-name*="Apple"]:before,
+			&[data-dnd-name*="Android"]:before,
+			&[data-dnd-name*="Smartphones"]:before,
+			&[data-dnd-name*="Mobile"]:before,
+			&[data-dnd-name*="Tablets"]:before,
+			&[data-dnd-name*="Phones"]:before,
+			&[data-dnd-name*="Phone"]:before {
 				background-image: url(https://pinpal.github.io/imageDump/Jailbreak.png);
 			}
-			&[data-dnd-name="Keyboards"]:before {
+			&[data-dnd-name*="Keyboards"]:before,
+			&[data-dnd-name*="Mechanical"]:before,
+			&[data-dnd-name*="Keycaps"]:before,
+			&[data-dnd-name*="Switches"]:before {
 				background-image: url(https://pinpal.github.io/imageDump/Keyboards.png);
 			}
-			&[data-dnd-name="Computing"]:before {
+			&[data-dnd-name*="Computing"]:before,
+			&[data-dnd-name*="PC"]:before,
+			&[data-dnd-name*="Hardware"]:before {
 				background-image: url(https://pinpal.github.io/imageDump/PC.png);
 			}
-			&[data-dnd-name="Programming"]:before {
+			&[data-dnd-name*="Programming"]:before,
+			&[data-dnd-name*="Coding"]:before {
 				background-image: url(https://pinpal.github.io/imageDump/Programming.png);
 			}
-			&[data-dnd-name="COD"]:before {
+			&[data-dnd-name*="COD"]:before,
+			&[data-dnd-name*="Call of Duty"]:before,
+			&[data-dnd-name*="CoD"]:before,
+			&[data-dnd-name*="Warzone"]:before {
 				background-image: url(https://pinpal.github.io/imageDump/COD.png);
 			}
 		}
