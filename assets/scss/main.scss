@@ -177,6 +177,10 @@ nav[aria-label="Servers sidebar"] {
 		&:hover {
 			--gac-box-color: var(--gac-hover-color-overlay);
 		}
+
+		*[class="selected_"] {
+			--gac-box-color: var(--gac-accent-color);
+		}
 	}
 
 	*[class*="selected_"] {
