@@ -14,6 +14,7 @@
 	--gac-hover-color: var(--background-modifier-selected);
 	--gac-hover-color-overlay: var(--background-modifier-selected);
 	--gac-accent-color: var(--brand-experiment);
+	--gac-accent-hover: var(--brand-experiment-430);
 }
 .custom-theme-background {
 	&.theme-dark {
@@ -28,7 +29,8 @@
 	}
 }
 .theme-light {
-	--gac-accent-color: #5cb3ff;
+	--gac-accent-color: #7abbec;
+	--gac-accent-hover: #5cb3ff;
 	--gac-image-filter: invert(1);
 	--gac-image-hover-brightness: 0.1;
 }
@@ -174,12 +176,17 @@ nav[aria-label="Servers sidebar"] {
 	// Servers in folder override (for theme support)
 	div[class*="wrapper_"] ul > div[class*="listItem_"] foreignObject > div {
 		--gac-box-color: none;
+
 		&:hover {
-			--gac-box-color: var(--gac-hover-color-overlay);
+			--gac-box-color: var(--gac-hover-color);
 		}
 
-		*[class="selected_"] {
+		&[class*="selected_"] {
 			--gac-box-color: var(--gac-accent-color);
+
+			&:hover {
+				--gac-box-color: var(--gac-accent-hover) !important;
+			}
 		}
 	}
 
