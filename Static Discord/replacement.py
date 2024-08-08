@@ -66,6 +66,7 @@ def main():
     for server in usernamesFile["servers"]:
         servers += rf'(?<!\w){re.escape(server)}(?!\w)|'
     servers = servers[:-1]  # Remove the last pipe character
+    print
     
     # Find all HTML files in the current directory
     dump_files_path = os.path.join(current_directory, "discord-dump")
