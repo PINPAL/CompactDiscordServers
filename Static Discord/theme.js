@@ -1,8 +1,11 @@
 const themeButtonsElements = document.getElementsByClassName("themeSelectionContainer__575f5");
 const htmlElement = document.getElementsByTagName("html")[0];
 const themeStyleElement = document.getElementById("theme-style");
-const someStupidElement = document.getElementsByClassName("container__11d72");
-console.log(someStupidElement);
+
+// Handle the navbar which is different to everything else for some reason
+// discord is a mess.
+let someStupidElement = document.getElementsByTagName("section");
+someStupidElement = Array.from(someStupidElement).filter((element) => element.className.match("container_"));
 
 let selectionCircle = document.createElement("div");
 selectionCircle.classList.add("selectionCircle_f4288e");

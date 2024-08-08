@@ -13,8 +13,8 @@
 	--gac-text-hover-color: var(--interactive-active);
 	--gac-hover-color: var(--background-modifier-selected);
 	--gac-hover-color-overlay: var(--background-modifier-selected);
-	--gac-accent-color: var(--brand-experiment);
-	--gac-accent-hover: var(--brand-experiment-430);
+	--gac-accent-color: var(--bg-brand);
+	--gac-accent-hover: var(--brand-430);
 }
 .custom-theme-background {
 	&.theme-dark {
@@ -75,6 +75,85 @@ nav[aria-label="Servers sidebar"] {
 
 	foreignObject {
 		mask: none !important;
+	}
+
+	// DM Notifications
+	&
+		> ul
+		> div[class*="scrollerBase_"]
+		> div:not([class*="tutorialContainer_"])
+		> div[class*="listItem_"]
+		> div[class*="listItemWrapper_"]
+		> div[class*="wrapper_"] {
+		background: var(--gac-box-color) !important;
+		border-radius: var(--gac-border-radius) !important;
+
+		&:has(div[class*="lowerBadge_"]) {
+			background: radial-gradient(
+				circle at calc(100% - 4px) 100%,
+				var(--status-danger),
+				var(--gac-box-color) 25%
+			) !important;
+			--gac-text-color: var(--white);
+
+			&:hover {
+				background: var(--gac-accent-color) !important;
+			}
+		}
+		&:has(div[class*="upperBadge_"]) {
+			background: radial-gradient(
+				circle at calc(100% - 4px) 0%,
+				var(--status-positive),
+				var(--gac-box-color) 25%
+			) !important;
+			--gac-text-color: var(--white);
+
+			&:hover {
+				background: var(--gac-accent-color) !important;
+			}
+		}
+
+		& > div[class*="lowerBadge_"] {
+			bottom: 4px;
+			right: 4px;
+		}
+
+		& > div[class*="upperBadge_"] {
+			top: 4px;
+			right: 4px;
+		}
+
+		div[class*="childWrapper_"] {
+			justify-content: flex-start !important;
+			background: unset !important;
+			scale: unset !important;
+
+			// Group DM Multi-Icon
+			div[class*="container_"] {
+				svg {
+					margin-top: calc(-1 * var(--gac-padding)) !important;
+					height: 48px !important;
+					width: 48px !important;
+					max-width: 48px !important;
+					min-width: 48px !important;
+
+					foreignObject {
+						width: 32px !important;
+						min-width: 32px !important;
+						max-width: 32px !important;
+						line-height: 28px !important;
+						transform: unset !important;
+
+						img {
+							vertical-align: unset !important;
+							width: 16px !important;
+							height: 16px !important;
+							margin-left: unset !important;
+						}
+					}
+				}
+			}
+		}
 	}
 
 	span[class*="expandedFolderBackground_"] {

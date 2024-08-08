@@ -1,2 +1,6 @@
 node_modules/
-Replacement Text.md
+
+# Ignore dumps
+Static Discord/discord-dump/*
+# But keep the compiled index.html
+!Static Discord/discord-dump/index.html
