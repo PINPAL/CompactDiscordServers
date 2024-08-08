@@ -6,4 +6,4 @@ Static Discord/discord-dump/*
 !Static Discord/discord-dump/index.html
 
 # Ignore sensitive username data
-usernames.json
+Static Discord/usernames.json
