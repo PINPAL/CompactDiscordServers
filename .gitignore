@@ -4,3 +4,6 @@ node_modules/
 Static Discord/discord-dump/*
 # But keep the compiled index.html
 !Static Discord/discord-dump/index.html
+
+# Ignore sensitive username data
+usernames.json
