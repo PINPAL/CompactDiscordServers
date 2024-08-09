@@ -87,12 +87,28 @@ nav[aria-label="Servers sidebar"] {
 		> div[class*="wrapper_"] {
 		background: var(--gac-box-color) !important;
 		border-radius: var(--gac-border-radius) !important;
+		--gac-badge-offset: -2px;
+		--gac-badge-bg-percentage: 55%;
+
+		& > div[class*="lowerBadge_"] {
+			right: var(--gac-badge-offset);
+			bottom: var(--gac-badge-offset);
+			transition: right 0.25s ease, bottom 0.25s ease;
+			transition-delay: var(--gac-transition-delay);
+		}
+
+		& > div[class*="upperBadge_"] {
+			right: var(--gac-badge-offset);
+			top: var(--gac-badge-offset);
+			transition: right 0.25s ease, top 0.25s ease;
+			transition-delay: var(--gac-transition-delay);
+		}
 
 		&:has(div[class*="lowerBadge_"]) {
 			background: radial-gradient(
 				circle at calc(100% - 4px) 100%,
 				var(--status-danger),
-				var(--gac-box-color) 25%
+				var(--gac-box-color) var(--gac-badge-bg-percentage)
 			) !important;
 			--gac-text-color: var(--white);
 
@@ -104,23 +120,13 @@ nav[aria-label="Servers sidebar"] {
 			background: radial-gradient(
 				circle at calc(100% - 4px) 0%,
 				var(--status-positive),
-				var(--gac-box-color) 25%
+				var(--gac-box-color) var(--gac-badge-bg-percentage)
 			) !important;
 			--gac-text-color: var(--white);
 
 			&:hover {
 				background: var(--gac-accent-color) !important;
 			}
-		}
-
-		& > div[class*="lowerBadge_"] {
-			bottom: 4px;
-			right: 4px;
-		}
-
-		& > div[class*="upperBadge_"] {
-			top: 4px;
-			right: 4px;
 		}
 
 		div[class*="childWrapper_"] {
@@ -565,6 +571,18 @@ html.app-focused nav[aria-label="Servers sidebar"]:hover {
 			max-width: calc(var(--gac-expanded-width) - var(--gac-collapse-width) - 1.5 * var(--gac-padding));
 			opacity: 1;
 		}
+	}
+
+	// DM Notifications
+	&
+		> ul
+		> div[class*="scrollerBase_"]
+		> div:not([class*="tutorialContainer_"])
+		> div[class*="listItem_"]
+		> div[class*="listItemWrapper_"]
+		> div[class*="wrapper_"] {
+		--gac-badge-offset: 4px;
+		--gac-badge-bg-percentage: 25%;
 	}
 
 	// adjust width of various things
