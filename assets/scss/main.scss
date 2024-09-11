@@ -466,88 +466,91 @@ nav[aria-label="Servers sidebar"] {
 			}
 
 			// Custom Icons
-			&[data-dnd-name*="IRL"]::before,
-			&[data-dnd-name*="In Real Life"]::before,
-			&[data-dnd-name*="Real Life"]::before,
-			&[data-dnd-name*="Life"]::before,
-			&[data-dnd-name*="Friends"]::before,
-			&[data-dnd-name*="Friend"]::before,
-			&[data-dnd-name*="Friendship"]::before,
-			&[data-dnd-name*="Social"]::before,
-			&[data-dnd-name*="Socializing"]::before {
+			&[data-dnd-name*="irl" i]::before,
+			&[data-dnd-name*="in real life" i]::before,
+			&[data-dnd-name*="real life" i]::before,
+			&[data-dnd-name*="life" i]::before,
+			&[data-dnd-name*="friends" i]::before,
+			&[data-dnd-name*="friend" i]::before,
+			&[data-dnd-name*="friendship" i]::before,
+			&[data-dnd-name*="social" i]::before,
+			&[data-dnd-name*="socializing" i]::before {
 				background-image: url(https://pinpal.github.io/imageDump/IRL.png);
 			}
-			&[data-dnd-name*="CS"]:before,
-			&[data-dnd-name*="Counter-Strike"]:before,
-			&[data-dnd-name*="Global Offensive"]:before,
-			&[data-dnd-name*="CS:GO"]:before,
-			&[data-dnd-name*="CSGO"]:before,
-			&[data-dnd-name*="CS GO"]:before,
-			&[data-dnd-name*="Counter Strike"]:before {
+			&[data-dnd-name*="cs" i]:before,
+			&[data-dnd-name*="counter-strike" i]:before,
+			&[data-dnd-name*="global offensive" i]:before,
+			&[data-dnd-name*="cs:go" i]:before,
+			&[data-dnd-name*="csgo" i]:before,
+			&[data-dnd-name*="cs go" i]:before,
+			&[data-dnd-name*="cs2" i]:before,
+			&[data-dnd-name*="counter strike" i]:before {
 				background-image: url(https://pinpal.github.io/imageDump/CS.png);
 			}
-			&[data-dnd-name*="Tarkov"]:before,
-			&[data-dnd-name*="Escape from Tarkov"]:before,
-			&[data-dnd-name*="EFT"]:before,
-			&[data-dnd-name*="Eft"]:before {
+			&[data-dnd-name*="tarkov" i]:before,
+			&[data-dnd-name*="escape from tarkov" i]:before,
+			&[data-dnd-name*="eft" i]:before {
 				background-image: url(https://pinpal.github.io/imageDump/EFT.png);
 			}
-			&[data-dnd-name*="Valorant"]:before,
-			&[data-dnd-name*="VAL"]:before,
-			&[data-dnd-name*="VALORANT"]:before,
-			&[data-dnd-name*="Val"]:before {
+			&[data-dnd-name*="valorant" i]:before,
+			&[data-dnd-name*="val" i]:before {
 				background-image: url(https://pinpal.github.io/imageDump/Val.png);
 			}
-			&[data-dnd-name*="MC"]:before,
-			&[data-dnd-name*="Minecraft"]:before {
+			&[data-dnd-name*="mc" i]:before,
+			&[data-dnd-name*="craft" i]:before,
+			&[data-dnd-name*="minecraft" i]:before {
 				background-image: url(https://pinpal.github.io/imageDump/MC_Alt.png);
 			}
-			&[data-dnd-name*="Modded"]:before,
-			&[data-dnd-name*="Modding"]:before,
-			&[data-dnd-name*="Mods"]:before,
-			&[data-dnd-name*="Mod"]:before,
-			&[data-dnd-name*="Modpack"]:before,
-			&[data-dnd-name*="Modpacks"]:before {
+			&[data-dnd-name*="modded" i]:before,
+			&[data-dnd-name*="modding" i]:before,
+			&[data-dnd-name*="mods" i]:before,
+			&[data-dnd-name*="mod" i]:before,
+			&[data-dnd-name*="modpack" i]:before,
+			&[data-dnd-name*="modpacks" i]:before {
 				background-image: url(https://pinpal.github.io/imageDump/Mods.png);
 			}
-			&[data-dnd-name*="iOS"]:before,
-			&[data-dnd-name*="Jailbreak"]:before,
-			&[data-dnd-name*="iPhone"]:before,
-			&[data-dnd-name*="iPad"]:before,
-			&[data-dnd-name*="Apple"]:before,
-			&[data-dnd-name*="Android"]:before,
-			&[data-dnd-name*="Smartphones"]:before,
-			&[data-dnd-name*="Mobile"]:before,
-			&[data-dnd-name*="Tablets"]:before,
-			&[data-dnd-name*="Phones"]:before,
-			&[data-dnd-name*="Phone"]:before {
+			&[data-dnd-name*="ios" i]:before,
+			&[data-dnd-name*="jailbreak" i]:before,
+			&[data-dnd-name*="iphone" i]:before,
+			&[data-dnd-name*="ipad" i]:before,
+			&[data-dnd-name*="apple" i]:before,
+			&[data-dnd-name*="android" i]:before,
+			&[data-dnd-name*="smartphones" i]:before,
+			&[data-dnd-name*="mobile" i]:before,
+			&[data-dnd-name*="tablets" i]:before,
+			&[data-dnd-name*="phones" i]:before,
+			&[data-dnd-name*="phone" i]:before {
 				background-image: url(https://pinpal.github.io/imageDump/Jailbreak.png);
 			}
-			&[data-dnd-name*="Keyboards"]:before,
-			&[data-dnd-name*="Mechanical"]:before,
-			&[data-dnd-name*="Keycaps"]:before,
-			&[data-dnd-name*="Switches"]:before {
+			&[data-dnd-name*="keyboards" i]:before,
+			&[data-dnd-name*="mechanical" i]:before,
+			&[data-dnd-name*="keycaps" i]:before,
+			&[data-dnd-name*="switches" i]:before {
 				background-image: url(https://pinpal.github.io/imageDump/Keyboards.png);
 			}
-			&[data-dnd-name*="Computing"]:before,
-			&[data-dnd-name*="PC"]:before,
-			&[data-dnd-name*="Hardware"]:before {
+			&[data-dnd-name*="computing" i]:before,
+			&[data-dnd-name*="pc" i]:before,
+			&[data-dnd-name*="hardware" i]:before {
 				background-image: url(https://pinpal.github.io/imageDump/PC.png);
 			}
-			&[data-dnd-name*="Programming"]:before,
-			&[data-dnd-name*="Coding"]:before,
-			&[data-dnd-name*="Code"]:before,
-			&[data-dnd-name*="Software"]:before,
-			&[data-dnd-name*="Development"]:before {
+			&[data-dnd-name*="programming" i]:before,
+			&[data-dnd-name*="coding" i]:before,
+			&[data-dnd-name*="code" i]:before,
+			&[data-dnd-name*="software" i]:before,
+			&[data-dnd-name*="development" i]:before {
 				background-image: url(https://pinpal.github.io/imageDump/Programming.png);
 			}
-			&[data-dnd-name*="COD"]:before,
-			&[data-dnd-name*="Call of Duty"]:before,
-			&[data-dnd-name*="CoD"]:before,
-			&[data-dnd-name*="Warzone"]:before,
-			&[data-dnd-name*="MW"]:before,
-			&[data-dnd-name*="Modern Warfare"]:before {
+			&[data-dnd-name*="cod" i]:before,
+			&[data-dnd-name*="call of duty" i]:before,
+			&[data-dnd-name*="warzone" i]:before,
+			&[data-dnd-name*="mw" i]:before,
+			&[data-dnd-name*="modern warfare" i]:before {
 				background-image: url(https://pinpal.github.io/imageDump/COD.png);
+			}
+			&[data-dnd-name*="gaming" i]:before,
+			&[data-dnd-name*="games" i]:before,
+			&[data-dnd-name*="game" i]:before {
+				background-image: url(https://pinpal.github.io/imageDump/Games.png);
 			}
 		}
 		div[class*="closedFolderIconWrapper_"],
