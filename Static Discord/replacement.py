@@ -46,10 +46,19 @@ def main():
     current_directory = os.path.dirname(os.path.realpath(__file__))
     
     # Regex to be replaced
-    games = r'(Overwatch® 2)|(Counter Strike 2)|(PUBG)'
     # Read the usernames/servers/groupchats from usernames.json file
     usernamesFile = os.path.join(current_directory, "usernames.json")
     usernamesFile = json.load(open(usernamesFile))
+    # Construct the regex pattern to match all games
+    games = r''
+    for game in usernamesFile["games"]:
+        games += rf'(?<!\w){re.escape(game)}(?!\w)|'
+    games = games[:-1]  # Remove the last pipe character
+    # Construct the regex pattern to match all user status text
+    status_text = r''
+    for status in usernamesFile["status_text"]:
+        status_text += rf'(?<!\w){re.escape(status)}(?!\w)|'
+    status_text = status_text[:-1]  # Remove the last pipe character
     # Construct the regex pattern to match all usernames
     usernames = r''
     for username in usernamesFile["usernames"]:
@@ -66,9 +75,8 @@ def main():
     for server in usernamesFile["servers"]:
         servers += rf'(?<!\w){re.escape(server)}(?!\w)|'
     servers = servers[:-1]  # Remove the last pipe character
-    print
     
-    # Find all HTML files in the current directory
+    # Find all HTML files in the current directory/discord-dump
     dump_files_path = os.path.join(current_directory, "discord-dump")
     dumped_html_files = [f for f in os.listdir(dump_files_path) if f.endswith('.html')]
     if not dumped_html_files:
@@ -102,7 +110,6 @@ def main():
     # Construct a regex pattern to match all user images
     user_image_pattern = rf'src="\./{re.escape(html_files_directory_name)}/[^"]*\.(webp|png)"'
     user_image_pattern = rf'src="\./{re.escape(html_files_directory_name)}/[^"]*\.(webp|png)"'
-    print(user_image_pattern)
     server_image_pattern = rf'class="icon_f90abb" src="\./\.\.\/generic-user\.png"'
 
     # Replace patterns in the new HTML file
@@ -112,6 +119,7 @@ def main():
     replace_patterns_in_file(new_html_file_path, servers, "Server Name")
     replace_patterns_in_file(new_html_file_path, user_image_pattern, 'src="./../generic-user.png"')
     replace_patterns_in_file(new_html_file_path, server_image_pattern, 'class="icon__0cbed" src="./../generic-server.png"')
+    replace_patterns_in_file(new_html_file_path, status_text, "Example Long User Status Text Description")
     
     # Remove all unused files from the original directory 
     remove_junk_files(html_files_directory_path)
@@ -133,6 +141,11 @@ def main():
     for div in soup.find_all('div', class_='drag-previewer'):
         div.decompose()  # This removes the tag from the tree
         
+    # Find and remove the <img> with class 'emoji' inside of a <div> with class 'activity_.*'
+    for div in soup.find_all('div', class_=re.compile(r'activity_.*')):
+        for img in div.find_all('img', class_='emoji'):
+            img.decompose() # This removes the tag from the tree
+    
     # Add the stylesheet link to the new HTML file
     link_tag = soup.new_tag('link')
     link_tag['rel'] = 'stylesheet'

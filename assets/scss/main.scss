@@ -289,6 +289,10 @@ nav[aria-label="Servers sidebar"] {
 	ul > div[class*="scrollerBase_"] > div[class*="listItem_"] {
 		display: none !important;
 	}
+	// Remove Discover from sidebar
+	div[class*="footer_"] {
+		display: none !important;
+	}
 
 	// Things directly within the container
 	div[aria-label="Servers"],
