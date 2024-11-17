@@ -56,6 +56,10 @@ nav[aria-label="Private channels"] {
 			& > li:has(a[href$="/store"]) {
 				display: none !important;
 			}
+			// New Nitro
+			& > div[aria-label="Try Nitro for 2 weeks on us!"] {
+				display: none !important;
+			}
 		}
 	}
 }
