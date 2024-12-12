@@ -44,7 +44,7 @@ main[aria-label="Friends"] div[class*="nowPlayingColumn_"] {
 	display: block !important;
 }
 
-// Hide Shop & Nitro in Private messages Sidebar
+// Hide Shop & Nitro in Private Messages Sidebar
 nav[aria-label="Private channels"] {
 	& > div[class*="scrollerBase_"] {
 		& > ul[aria-label="Direct Messages"] {
@@ -61,6 +61,17 @@ nav[aria-label="Private channels"] {
 				display: none !important;
 			}
 		}
+	}
+}
+// Hide Download Apps & Discover in Servers Sidebar
+nav[aria-label="Servers sidebar"] > ul > div[class*="itemsContainer_"] {
+	// Download Apps
+	& > div[class*="scrollerBase_"] > div[class*="listItem_"]:has(div[aria-label="Download Apps"]) {
+		display: none !important;
+	}
+	// Discover
+	& > div[class*="footer_"] {
+		display: none !important;
 	}
 }
 
@@ -82,8 +93,11 @@ nav[aria-label="Servers sidebar"] {
 	}
 
 	// DM Notifications
+	--gac-badge-offset: -2px;
+	--gac-badge-bg-percentage: 55%;
 	&
 		> ul
+		> div[class*="itemsContainer_"]
 		> div[class*="scrollerBase_"]
 		> div:not([class*="tutorialContainer_"])
 		> div[class*="listItem_"]
@@ -91,8 +105,6 @@ nav[aria-label="Servers sidebar"] {
 		> div[class*="wrapper_"] {
 		background: var(--gac-box-color) !important;
 		border-radius: var(--gac-border-radius) !important;
-		--gac-badge-offset: -2px;
-		--gac-badge-bg-percentage: 55%;
 
 		& > div[class*="lowerBadge_"] {
 			right: var(--gac-badge-offset);
@@ -108,29 +120,29 @@ nav[aria-label="Servers sidebar"] {
 			transition-delay: var(--gac-transition-delay);
 		}
 
+		&:has(div[class*="upperBadge_"]),
 		&:has(div[class*="lowerBadge_"]) {
 			background: radial-gradient(
-				circle at calc(100% - 4px) 100%,
-				var(--status-danger),
+				circle at calc(100% - 4px) var(--gac-badge-gradient-y),
+				var(--gac-badge-gradient-color),
 				var(--gac-box-color) var(--gac-badge-bg-percentage)
 			) !important;
 			--gac-text-color: var(--white);
+
+			transition-property: background, max-width, min-width, width !important;
 
 			&:hover {
 				background: var(--gac-accent-color) !important;
 			}
 		}
-		&:has(div[class*="upperBadge_"]) {
-			background: radial-gradient(
-				circle at calc(100% - 4px) 0%,
-				var(--status-positive),
-				var(--gac-box-color) var(--gac-badge-bg-percentage)
-			) !important;
-			--gac-text-color: var(--white);
 
-			&:hover {
-				background: var(--gac-accent-color) !important;
-			}
+		&:has(div[class*="lowerBadge_"]) {
+			--gac-badge-gradient-y: 100%;
+			--gac-badge-gradient-color: var(--status-danger);
+		}
+		&:has(div[class*="upperBadge_"]) {
+			--gac-badge-gradient-y: 0%;
+			--gac-badge-gradient-color: var(--status-positive);
 		}
 
 		div[class*="childWrapper_"] {
@@ -168,17 +180,11 @@ nav[aria-label="Servers sidebar"] {
 
 	span[class*="expandedFolderBackground_"] {
 		background: var(--gac-box-color) !important;
-		width: calc(var(--gac-expanded-width) - 2 * var(--gac-padding)) !important;
-		max-width: calc(var(--gac-expanded-width) - 2 * var(--gac-padding)) !important;
-		min-width: calc(var(--gac-expanded-width) - 2 * var(--gac-padding)) !important;
 		height: 100% !important;
 		left: var(--gac-padding) !important;
 		border-radius: var(--gac-border-radius) !important;
 		bottom: 0 !important;
 		box-sizing: border-box !important;
-
-		transition: max-width 0.25s ease, min-width 0.25s ease;
-		transition-delay: var(--gac-transition-delay);
 
 		&::before {
 			content: "";
@@ -289,15 +295,6 @@ nav[aria-label="Servers sidebar"] {
 		border-radius: unset !important;
 	}
 
-	// Random crap in sidebar eg: discover, download apps and nitro etc
-	ul > div[class*="scrollerBase_"] > div[class*="listItem_"] {
-		display: none !important;
-	}
-	// Remove Discover from sidebar
-	div[class*="footer_"] {
-		display: none !important;
-	}
-
 	// Things directly within the container
 	div[aria-label="Servers"],
 	div[class*="scrollerBase_"] {
@@ -316,7 +313,9 @@ nav[aria-label="Servers sidebar"] {
 	div[class*="childWrapper_"],
 	div[class*="folderIconWrapper_"],
 	div[class*="target_"],
-	div[class*="tutorialContainer_"] {
+	div[class*="tutorialContainer_"],
+	span[class*="expandedFolderBackground_"],
+	div[class*="guildSeparator_"] {
 		width: calc(var(--gac-expanded-width) - 2 * var(--gac-padding)) !important;
 		max-width: calc(var(--gac-expanded-width) - 2 * var(--gac-padding)) !important;
 		min-width: calc(var(--gac-expanded-width) - 2 * var(--gac-padding)) !important;
@@ -483,7 +482,7 @@ nav[aria-label="Servers sidebar"] {
 			&[data-dnd-name*="friendship" i]::before,
 			&[data-dnd-name*="social" i]::before,
 			&[data-dnd-name*="socializing" i]::before {
-				background-image: url(https://pinpal.github.io/imageDump/IRL.png);
+				background-image: url("https://pinpal.github.io/imageDump/IRL.png");
 			}
 			&[data-dnd-name*="cs" i]:before,
 			&[data-dnd-name*="counter-strike" i]:before,
@@ -493,21 +492,21 @@ nav[aria-label="Servers sidebar"] {
 			&[data-dnd-name*="cs go" i]:before,
 			&[data-dnd-name*="cs2" i]:before,
 			&[data-dnd-name*="counter strike" i]:before {
-				background-image: url(https://pinpal.github.io/imageDump/CS.png);
+				background-image: url("https://pinpal.github.io/imageDump/CS.png");
 			}
 			&[data-dnd-name*="tarkov" i]:before,
 			&[data-dnd-name*="escape from tarkov" i]:before,
 			&[data-dnd-name*="eft" i]:before {
-				background-image: url(https://pinpal.github.io/imageDump/EFT.png);
+				background-image: url("https://pinpal.github.io/imageDump/EFT.png");
 			}
 			&[data-dnd-name*="valorant" i]:before,
 			&[data-dnd-name*="val" i]:before {
-				background-image: url(https://pinpal.github.io/imageDump/Val.png);
+				background-image: url("https://pinpal.github.io/imageDump/Val.png");
 			}
 			&[data-dnd-name*="mc" i]:before,
 			&[data-dnd-name*="craft" i]:before,
 			&[data-dnd-name*="minecraft" i]:before {
-				background-image: url(https://pinpal.github.io/imageDump/MC_Alt.png);
+				background-image: url("https://pinpal.github.io/imageDump/MC_Alt.png");
 			}
 			&[data-dnd-name*="modded" i]:before,
 			&[data-dnd-name*="modding" i]:before,
@@ -515,7 +514,7 @@ nav[aria-label="Servers sidebar"] {
 			&[data-dnd-name*="mod" i]:before,
 			&[data-dnd-name*="modpack" i]:before,
 			&[data-dnd-name*="modpacks" i]:before {
-				background-image: url(https://pinpal.github.io/imageDump/Mods.png);
+				background-image: url("https://pinpal.github.io/imageDump/Mods.png");
 			}
 			&[data-dnd-name*="ios" i]:before,
 			&[data-dnd-name*="jailbreak" i]:before,
@@ -528,37 +527,37 @@ nav[aria-label="Servers sidebar"] {
 			&[data-dnd-name*="tablets" i]:before,
 			&[data-dnd-name*="phones" i]:before,
 			&[data-dnd-name*="phone" i]:before {
-				background-image: url(https://pinpal.github.io/imageDump/Jailbreak.png);
+				background-image: url("https://pinpal.github.io/imageDump/Jailbreak.png");
 			}
 			&[data-dnd-name*="keyboards" i]:before,
 			&[data-dnd-name*="mechanical" i]:before,
 			&[data-dnd-name*="keycaps" i]:before,
 			&[data-dnd-name*="switches" i]:before {
-				background-image: url(https://pinpal.github.io/imageDump/Keyboards.png);
+				background-image: url("https://pinpal.github.io/imageDump/Keyboards.png");
 			}
 			&[data-dnd-name*="computing" i]:before,
 			&[data-dnd-name*="pc" i]:before,
 			&[data-dnd-name*="hardware" i]:before {
-				background-image: url(https://pinpal.github.io/imageDump/PC.png);
+				background-image: url("https://pinpal.github.io/imageDump/PC.png");
 			}
 			&[data-dnd-name*="programming" i]:before,
 			&[data-dnd-name*="coding" i]:before,
 			&[data-dnd-name*="code" i]:before,
 			&[data-dnd-name*="software" i]:before,
 			&[data-dnd-name*="development" i]:before {
-				background-image: url(https://pinpal.github.io/imageDump/Programming.png);
+				background-image: url("https://pinpal.github.io/imageDump/Programming.png");
 			}
 			&[data-dnd-name*="cod" i]:before,
 			&[data-dnd-name*="call of duty" i]:before,
 			&[data-dnd-name*="warzone" i]:before,
 			&[data-dnd-name*="mw" i]:before,
 			&[data-dnd-name*="modern warfare" i]:before {
-				background-image: url(https://pinpal.github.io/imageDump/COD.png);
+				background-image: url("https://pinpal.github.io/imageDump/COD.png");
 			}
 			&[data-dnd-name*="gaming" i]:before,
 			&[data-dnd-name*="games" i]:before,
 			&[data-dnd-name*="game" i]:before {
-				background-image: url(https://pinpal.github.io/imageDump/Games.png);
+				background-image: url("https://pinpal.github.io/imageDump/Games.png");
 			}
 		}
 		div[class*="closedFolderIconWrapper_"],
@@ -585,16 +584,8 @@ html.app-focused nav[aria-label="Servers sidebar"]:hover {
 	}
 
 	// DM Notifications
-	&
-		> ul
-		> div[class*="scrollerBase_"]
-		> div:not([class*="tutorialContainer_"])
-		> div[class*="listItem_"]
-		> div[class*="listItemWrapper_"]
-		> div[class*="wrapper_"] {
-		--gac-badge-offset: 4px;
-		--gac-badge-bg-percentage: 25%;
-	}
+	--gac-badge-offset: 4px;
+	--gac-badge-bg-percentage: 25%;
 
 	// adjust width of various things
 	div[class*="circleIconButton_"],

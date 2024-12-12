@@ -114,12 +114,12 @@ def main():
 
     # Replace patterns in the new HTML file
     replace_patterns_in_file(new_html_file_path, usernames, "Username")
-    replace_patterns_in_file(new_html_file_path, games, "Generic Game")
-    replace_patterns_in_file(new_html_file_path, groupchats, "Group Name")
     replace_patterns_in_file(new_html_file_path, servers, "Server Name")
+    replace_patterns_in_file(new_html_file_path, groupchats, "Group Name")
     replace_patterns_in_file(new_html_file_path, user_image_pattern, 'src="./../generic-user.png"')
     replace_patterns_in_file(new_html_file_path, server_image_pattern, 'class="icon__0cbed" src="./../generic-server.png"')
     replace_patterns_in_file(new_html_file_path, status_text, "Example Long User Status Text Description")
+    replace_patterns_in_file(new_html_file_path, games, "Generic Game")
     
     # Remove all unused files from the original directory 
     remove_junk_files(html_files_directory_path)
