@@ -4,9 +4,13 @@
 	--gac-server-height: 48px;
 	--gac-padding: 8px;
 	--gac-border-radius: 8px;
-	--gac-transition-delay: 0.65s;
 	--gac-image-filter: ;
 	--gac-image-hover-brightness: 10;
+
+	--gac-transition-timing-func: ease-in-out;
+	--gac-transition-duration: 0.15s;
+	// Delay before sidebar collapses when not focused
+	--gac-transition-delay: 0.65s;
 
 	--gac-box-color: var(--background-secondary);
 	--gac-text-color: var(--channels-default);
@@ -85,7 +89,9 @@ nav[aria-label="Servers sidebar"] {
 	flex-shrink: 0 !important;
 	overflow-y: auto !important;
 
-	transition: max-width 0.25s ease, min-width 0.25s ease;
+	transition-property: max-width, min-width, width;
+	transition-timing-function: var(--gac-transition-timing-func);
+	transition-duration: var(--gac-transition-duration);
 	transition-delay: var(--gac-transition-delay);
 
 	foreignObject {
@@ -109,14 +115,18 @@ nav[aria-label="Servers sidebar"] {
 		& > div[class*="lowerBadge_"] {
 			right: var(--gac-badge-offset);
 			bottom: var(--gac-badge-offset);
-			transition: right 0.25s ease, bottom 0.25s ease;
+			transition-property: right, bottom;
+			transition-timing-function: var(--gac-transition-timing-func);
+			transition-duration: var(--gac-transition-duration);
 			transition-delay: var(--gac-transition-delay);
 		}
 
 		& > div[class*="upperBadge_"] {
 			right: var(--gac-badge-offset);
 			top: var(--gac-badge-offset);
-			transition: right 0.25s ease, top 0.25s ease;
+			transition-property: right, top;
+			transition-timing-function: var(--gac-transition-timing-func);
+			transition-duration: var(--gac-transition-duration);
 			transition-delay: var(--gac-transition-delay);
 		}
 
@@ -264,7 +274,9 @@ nav[aria-label="Servers sidebar"] {
 			border-radius: var(--gac-border-radius);
 			z-index: 0;
 
-			transition: max-width 0.25s ease, width 0.25s ease, min-width 0.25s ease;
+			transition-property: max-width, min-width, width;
+			transition-timing-function: var(--gac-transition-timing-func);
+			transition-duration: var(--gac-transition-duration);
 			transition-delay: var(--gac-transition-delay);
 		}
 	}
@@ -320,7 +332,9 @@ nav[aria-label="Servers sidebar"] {
 		max-width: calc(var(--gac-expanded-width) - 2 * var(--gac-padding)) !important;
 		min-width: calc(var(--gac-expanded-width) - 2 * var(--gac-padding)) !important;
 
-		transition: max-width 0.25s ease, min-width 0.25s ease, width 0.25s ease;
+		transition-property: max-width, min-width, width;
+		transition-timing-function: var(--gac-transition-timing-func);
+		transition-duration: var(--gac-transition-duration);
 		transition-delay: var(--gac-transition-delay);
 
 		foreignObject,
@@ -332,14 +346,18 @@ nav[aria-label="Servers sidebar"] {
 			max-width: calc(var(--gac-expanded-width) - 2 * var(--gac-padding)) !important;
 			min-width: calc(var(--gac-expanded-width) - 2 * var(--gac-padding)) !important;
 
-			transition: max-width 0.25s ease, min-width 0.25s ease, width 0.25s ease;
+			transition-property: max-width, min-width, width;
+			transition-timing-function: var(--gac-transition-timing-func);
+			transition-duration: var(--gac-transition-duration);
 			transition-delay: var(--gac-transition-delay);
 		}
 		// FIXME: WHAT IN THE ACTUAL FUCK IS GOING ON HERE????
 		foreignObject {
 			transform: translateX(-4px);
 
-			transition: max-width 0.25s ease, min-width 0.25s ease, width 0.25s ease, transform 0.25s ease;
+			transition-property: max-width, min-width, width, transform;
+			transition-timing-function: var(--gac-transition-timing-func);
+			transition-duration: var(--gac-transition-duration);
 			transition-delay: var(--gac-transition-delay);
 		}
 	}
@@ -396,7 +414,9 @@ nav[aria-label="Servers sidebar"] {
 				max-width: 0;
 				opacity: 0;
 
-				transition: max-width 0.25s ease, min-width 0.25s ease, opacity 0.5s ease;
+				transition-property: max-width, min-width, opacity;
+				transition-timing-function: var(--gac-transition-timing-func);
+				transition-duration: var(--gac-transition-duration);
 				transition-delay: var(--gac-transition-delay);
 			}
 		}
