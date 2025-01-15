@@ -16,7 +16,7 @@
 	--gac-text-color: var(--channels-default);
 	--gac-text-hover-color: var(--interactive-active);
 	--gac-hover-color: var(--background-modifier-selected);
-	--gac-hover-color-overlay: var(--background-modifier-selected);
+	--gac-hover-color-overlay: var(--background-modifier-hover);
 	--gac-accent-color: var(--bg-brand);
 	--gac-accent-hover: var(--brand-430);
 }
@@ -246,11 +246,11 @@ nav[aria-label="Servers sidebar"] {
 
 	// Fake Background
 	// ===============
-	// CircleIconButton Background
+	// CircleIconButton background
 	div[class*="circleIconButton_"],
-    // Home Button (Direct Messages)
+    // Home button (eg: Direct Messages)
     div[class*="tutorialContainer_"] div[data-list-item-id="guildsnav___home"] div[class*="childWrapper_"],
-    // Collapsed Folders
+    // Collapsed folders
 	div[class^="folderIconWrapper_"]:not(:has(div[class*="expandedFolderIconWrapper_"])),
     // Servers in folders
     div[aria-label="Servers"] > div[class*="wrapper_"] ul > div[class*="listItem_"] foreignObject > div,
@@ -322,15 +322,17 @@ nav[aria-label="Servers sidebar"] {
 	}
 
 	// adjust width of various things
-	div[class*="circleIconButton_"],
-	div[class*="listItem_"],
-	div[class*="wrapper_"],
-	div[class*="childWrapper_"],
-	div[class*="folderIconWrapper_"],
-	div[class*="target_"],
-	div[class*="tutorialContainer_"],
-	span[class*="expandedFolderBackground_"],
-	div[class*="guildSeparator_"] {
+	div[class*="circleIconButton_"], // Round buttons (Create Server, Add Server, etc.)
+	div[class*="listItem_"], // Servers
+	div[class*="wrapper_"], // General container for servers
+	// FIXME: div[class*="wrapper_"] ul[class^="stack_"], // Container for server details inside folder
+	div[class*="childWrapper_"], // Container for server details
+	div[class*="folderIconWrapper_"], // Folder icon container
+	div[class*="target_"], 
+	div[class*="tutorialContainer_"], // Home Button
+	span[class*="expandedFolderBackground_"], // Folder Background when expanded
+	div[class*="guildSeparator_"]  // Separator
+	{
 		width: calc(var(--gac-expanded-width) - 2 * var(--gac-padding)) !important;
 		max-width: calc(var(--gac-expanded-width) - 2 * var(--gac-padding)) !important;
 		min-width: calc(var(--gac-expanded-width) - 2 * var(--gac-padding)) !important;
@@ -382,6 +384,14 @@ nav[aria-label="Servers sidebar"] {
 		left: -8px !important;
 	}
 
+	// Container for Server Details
+	ul[class^="stack_"] {
+		width: var(--gac-expanded-width) !important;
+		min-width: var(--gac-expanded-width) !important;
+		max-width: var(--gac-expanded-width) !important;
+	}
+
+	// Server
 	div[class*="listItem_"] {
 		display: block !important;
 		position: relative !important;
