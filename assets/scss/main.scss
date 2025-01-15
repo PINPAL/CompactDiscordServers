@@ -234,8 +234,9 @@ nav[aria-label="Servers sidebar"] {
 	}
 
 	// Folder Background
-	div[class^="folderIconWrapper_"],
-	div[class^="folder_"], 
+	div[class^="folder_"],
+    // Collapsed Folder Background
+    div[class^="folderIconWrapper_"],
     // CircleIconButton Background
     div[class*="circleIconButton_"],
     // Home Button Background
@@ -249,6 +250,8 @@ nav[aria-label="Servers sidebar"] {
 	div[class*="circleIconButton_"],
     // Home Button (Direct Messages)
     div[class*="tutorialContainer_"] div[data-list-item-id="guildsnav___home"] div[class*="childWrapper_"],
+    // Collapsed Folders
+	div[class^="folderIconWrapper_"]:not(:has(div[class*="expandedFolderIconWrapper_"])),
     // Servers in folders
     div[aria-label="Servers"] > div[class*="wrapper_"] ul > div[class*="listItem_"] foreignObject > div,
     // Servers not in folder
