@@ -94,6 +94,12 @@ nav[aria-label="Servers sidebar"] {
 	transition-duration: var(--gac-transition-duration);
 	transition-delay: var(--gac-transition-delay);
 
+	&[class*="hidden_"] {
+		width: 0 !important;
+		max-width: 0 !important;
+		min-width: 0 !important;
+	}
+
 	foreignObject {
 		mask: none !important;
 	}
