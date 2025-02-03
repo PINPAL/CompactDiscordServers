@@ -39,10 +39,6 @@
 	--gac-image-hover-brightness: 0.1;
 }
 
-// Default Variables
-// --header-primary: #f2f3f5;
-// --background-secondary: #2b2d31;
-
 // Always show now playing column
 main[aria-label="Friends"] div[class*="nowPlayingColumn_"] {
 	display: block !important;
@@ -118,22 +114,20 @@ nav[aria-label="Servers sidebar"] {
 		background: var(--gac-box-color) !important;
 		border-radius: var(--gac-border-radius) !important;
 
-		& > div[class*="lowerBadge_"] {
+		& > div[class*="lowerBadge_"],
+		& > div[class*="upperBadge_"] {
 			right: var(--gac-badge-offset);
-			bottom: var(--gac-badge-offset);
-			transition-property: right, bottom;
 			transition-timing-function: var(--gac-transition-timing-func);
 			transition-duration: var(--gac-transition-duration);
 			transition-delay: var(--gac-transition-delay);
 		}
-
+		& > div[class*="lowerBadge_"] {
+			bottom: var(--gac-badge-offset);
+			transition-property: right, bottom;
+		}
 		& > div[class*="upperBadge_"] {
-			right: var(--gac-badge-offset);
 			top: var(--gac-badge-offset);
 			transition-property: right, top;
-			transition-timing-function: var(--gac-transition-timing-func);
-			transition-duration: var(--gac-transition-duration);
-			transition-delay: var(--gac-transition-delay);
 		}
 
 		&:has(div[class*="upperBadge_"]),
@@ -143,12 +137,11 @@ nav[aria-label="Servers sidebar"] {
 				var(--gac-badge-gradient-color),
 				var(--gac-box-color) var(--gac-badge-bg-percentage)
 			) !important;
-			--gac-text-color: var(--white);
 
 			transition-property: background, max-width, min-width, width !important;
 
 			&:hover {
-				background: var(--gac-accent-color) !important;
+				--gac-box-color: var(--gac-hover-color);
 			}
 		}
 
@@ -241,12 +234,12 @@ nav[aria-label="Servers sidebar"] {
 
 	// Folder Background
 	div[class^="folder_"],
-    // Collapsed Folder Background
-    div[class^="folderIconWrapper_"],
-    // CircleIconButton Background
-    div[class*="circleIconButton_"],
-    // Home Button Background
-    div[class*="tutorialContainer_"] div[data-list-item-id="guildsnav___home"] div[class*="childWrapper_"] {
+  // Collapsed Folder Background
+  div[class^="folderIconWrapper_"],
+  // CircleIconButton Background
+  div[class*="circleIconButton_"],
+  // Home Button Background
+  div[class*="tutorialContainer_"] div[data-list-item-id="guildsnav___home"] div[class*="childWrapper_"] {
 		background: none !important;
 	}
 
@@ -254,14 +247,14 @@ nav[aria-label="Servers sidebar"] {
 	// ===============
 	// CircleIconButton background
 	div[class*="circleIconButton_"],
-    // Home button (eg: Direct Messages)
-    div[class*="tutorialContainer_"] div[data-list-item-id="guildsnav___home"] div[class*="childWrapper_"],
-    // Collapsed folders
+  // Home button (eg: Direct Messages)
+  div[class*="tutorialContainer_"] div[data-list-item-id="guildsnav___home"] div[class*="childWrapper_"],
+  // Collapsed folders
 	div[class^="folderIconWrapper_"]:not(:has(div[class*="expandedFolderIconWrapper_"])),
-    // Servers in folders
-    div[aria-label="Servers"] > div[class*="wrapper_"] ul > div[class*="listItem_"] foreignObject > div,
-    // Servers not in folder
-    div[aria-label="Servers"] > div[class*="listItem_"] foreignObject > div {
+  // Servers in folders
+  div[aria-label="Servers"] > div[class*="wrapper_"] ul > div[class*="listItem_"] foreignObject > div,
+  // Servers not in folder
+  div[aria-label="Servers"] > div[class*="listItem_"] foreignObject > div {
 		&:hover {
 			--gac-box-color: var(--gac-hover-color);
 			--gac-text-color: var(--gac-text-hover-color);
@@ -289,26 +282,19 @@ nav[aria-label="Servers sidebar"] {
 			transition-delay: var(--gac-transition-delay);
 		}
 	}
-	// Servers in folder override (for theme support)
-	div[class*="wrapper_"] ul > div[class*="listItem_"] foreignObject > div {
-		--gac-box-color: none;
 
-		&:hover {
-			--gac-box-color: var(--gac-hover-color);
-		}
-
-		&[class*="selected_"] {
-			--gac-box-color: var(--gac-accent-color);
-
-			&:hover {
-				--gac-box-color: var(--gac-accent-hover) !important;
-			}
-		}
-	}
-
-	*[class*="selected_"] {
-		--gac-box-color: var(--gac-accent-color);
-		--gac-text-color: var(--gac-text-hover-color);
+	// Selected Servers (eg: the one that is currently open)
+	// Must be targetted by blobContainer because selected is also applied to the child when hovered
+	div[aria-label="Servers"]
+		> div[class*="wrapper_"]
+		> ul
+		> div[class*="listItem_"]
+		div[class*="blobContainer_"][class*="selected_"],
+  // Home Button Selected
+  div[aria-label="Direct Messages"][class*="selected_"] {
+		--gac-box-color: var(--gac-accent-color) !important;
+		--gac-text-color: var(--gac-text-hover-color) !important;
+		--gac-hover-color: var(--gac-accent-hover) !important;
 	}
 
 	// Circle Icon Button
@@ -375,10 +361,10 @@ nav[aria-label="Servers sidebar"] {
 
 	// Server inside folder
 	svg > foreignObject > div[class*="wrapper_"],
-    // Home Button
+  // Home Button
 	div[aria-label="Direct Messages"] div[class*="childWrapper_"],
-    // Circle Icon Button
-    div[class*="circleIconButton_"] {
+  // Circle Icon Button
+  div[class*="circleIconButton_"] {
 		display: inline-block;
 		padding-left: var(--gac-padding) !important;
 		line-height: 48px !important;
