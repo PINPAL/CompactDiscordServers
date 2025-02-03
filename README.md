@@ -63,6 +63,7 @@ Add the following to your CSS Config:
 ```
 
 **Colors**
+
 By default, they inherit from your Discord Theme.
 ```scss
 :root {
