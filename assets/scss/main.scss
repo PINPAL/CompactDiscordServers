@@ -1,13 +1,16 @@
 :root {
-	--gac-expanded-width: 72px;
+	--gac-expanded-width: 220px;
 	--gac-collapse-width: 72px;
+
 	--gac-server-height: 48px;
 	--gac-padding: 8px;
 	--gac-border-radius: 8px;
 	--gac-image-filter: ;
 	--gac-image-hover-brightness: 10;
 
+	// Timing function for sidebar collapse/expand
 	--gac-transition-timing-func: ease-in-out;
+	// Duration that animation for sidebar collapse/expand takes
 	--gac-transition-duration: 0.2s;
 	// Delay before sidebar collapses when not focused
 	--gac-transition-delay: 0.65s;
@@ -33,8 +36,6 @@
 	}
 }
 .theme-light {
-	--gac-accent-color: #7abbec;
-	--gac-accent-hover: #5cb3ff;
 	--gac-image-filter: invert(1);
 	--gac-image-hover-brightness: 0.1;
 }
@@ -77,9 +78,11 @@ nav[aria-label="Servers sidebar"] > ul > div[class*="itemsContainer_"] {
 
 // Server List
 nav[aria-label="Servers sidebar"] {
-	width: var(--gac-expanded-width) !important;
-	max-width: var(--gac-expanded-width) !important;
-	min-width: var(--gac-expanded-width) !important;
+	--gac-dynamic-width: var(--gac-collapse-width);
+
+	width: var(--gac-dynamic-width) !important;
+	max-width: var(--gac-dynamic-width) !important;
+	min-width: var(--gac-dynamic-width) !important;
 	flex-basis: 240px !important;
 	flex-grow: 0 !important;
 	flex-shrink: 0 !important;
@@ -268,7 +271,7 @@ nav[aria-label="Servers sidebar"] {
 			position: absolute;
 			top: 0;
 			left: 0;
-			width: calc(var(--gac-expanded-width) - 2 * var(--gac-padding));
+			width: calc(var(--gac-dynamic-width) - 2 * var(--gac-padding));
 			max-width: 100%;
 			min-width: 100%;
 			height: var(--gac-server-height);
@@ -285,11 +288,7 @@ nav[aria-label="Servers sidebar"] {
 
 	// Selected Servers (eg: the one that is currently open)
 	// Must be targetted by blobContainer because selected is also applied to the child when hovered
-	div[aria-label="Servers"]
-		> div[class*="wrapper_"]
-		> ul
-		> div[class*="listItem_"]
-		div[class*="blobContainer_"][class*="selected_"],
+	div[aria-label="Servers"] div[class*="blobContainer_"][class*="selected_"],
   // Home Button Selected
   div[aria-label="Direct Messages"][class*="selected_"] {
 		--gac-box-color: var(--gac-accent-color) !important;
@@ -315,39 +314,28 @@ nav[aria-label="Servers sidebar"] {
 
 	// adjust width of various things
 	div[class*="circleIconButton_"], // Round buttons (Create Server, Add Server, etc.)
-	div[class*="listItem_"], // Servers
 	div[class*="wrapper_"], // General container for servers
-	// FIXME: div[class*="wrapper_"] ul[class^="stack_"], // Container for server details inside folder
 	div[class*="childWrapper_"], // Container for server details
 	div[class*="folderIconWrapper_"], // Folder icon container
 	div[class*="target_"], 
 	div[class*="tutorialContainer_"], // Home Button
 	span[class*="expandedFolderBackground_"], // Folder Background when expanded
-	div[class*="guildSeparator_"]  // Separator
+	div[class*="guildSeparator_"],  // Separator
+	div[class*="listItem_"], // Server Container Parent
+  div[class*="listItemWrapper_"], // Server Container Child(0)
+  div[class*="wrapperSimple_"], // Server Container Child(1)
+  svg, // Server Container Child(2)
+  foreignObject // Server Container Child(3)
 	{
-		width: calc(var(--gac-expanded-width) - 2 * var(--gac-padding)) !important;
-		max-width: calc(var(--gac-expanded-width) - 2 * var(--gac-padding)) !important;
-		min-width: calc(var(--gac-expanded-width) - 2 * var(--gac-padding)) !important;
+		width: calc(var(--gac-dynamic-width) - 2 * var(--gac-padding)) !important;
+		max-width: calc(var(--gac-dynamic-width) - 2 * var(--gac-padding)) !important;
+		min-width: calc(var(--gac-dynamic-width) - 2 * var(--gac-padding)) !important;
 
 		transition-property: max-width, min-width, width;
 		transition-timing-function: var(--gac-transition-timing-func);
 		transition-duration: var(--gac-transition-duration);
 		transition-delay: var(--gac-transition-delay);
 
-		foreignObject,
-		div[class*="wrapperSimple_"],
-		div[class*="wrapper_"],
-		div[class*="listItemWrapper_"],
-		svg {
-			width: calc(var(--gac-expanded-width) - 2 * var(--gac-padding)) !important;
-			max-width: calc(var(--gac-expanded-width) - 2 * var(--gac-padding)) !important;
-			min-width: calc(var(--gac-expanded-width) - 2 * var(--gac-padding)) !important;
-
-			transition-property: max-width, min-width, width;
-			transition-timing-function: var(--gac-transition-timing-func);
-			transition-duration: var(--gac-transition-duration);
-			transition-delay: var(--gac-transition-delay);
-		}
 		// FIXME: WHAT IN THE ACTUAL FUCK IS GOING ON HERE????
 		foreignObject {
 			transform: translateX(-4px);
@@ -378,9 +366,9 @@ nav[aria-label="Servers sidebar"] {
 
 	// Container for Server Details
 	ul[class^="stack_"] {
-		width: var(--gac-expanded-width) !important;
-		min-width: var(--gac-expanded-width) !important;
-		max-width: var(--gac-expanded-width) !important;
+		width: var(--gac-dynamic-width) !important;
+		min-width: var(--gac-dynamic-width) !important;
+		max-width: var(--gac-dynamic-width) !important;
 	}
 
 	// Server
@@ -400,9 +388,9 @@ nav[aria-label="Servers sidebar"] {
 			}
 			&::after {
 				white-space: nowrap;
-				width: calc(var(--gac-expanded-width) - var(--gac-collapse-width) - var(--gac-padding));
-				max-width: calc(var(--gac-expanded-width) - var(--gac-collapse-width) - var(--gac-padding));
-				min-width: calc(var(--gac-expanded-width) - var(--gac-collapse-width) - var(--gac-padding));
+				width: 0;
+				max-width: 0;
+				min-width: 0;
 				overflow: hidden;
 				text-overflow: ellipsis;
 				position: absolute;
@@ -419,7 +407,7 @@ nav[aria-label="Servers sidebar"] {
 				max-width: 0;
 				opacity: 0;
 
-				transition-property: max-width, min-width, opacity;
+				transition-property: width, max-width, min-width, opacity;
 				transition-timing-function: var(--gac-transition-timing-func);
 				transition-duration: var(--gac-transition-duration);
 				transition-delay: var(--gac-transition-delay);
@@ -437,9 +425,9 @@ nav[aria-label="Servers sidebar"] {
 			border-radius: 50% !important;
 		}
 		// Home Icon
-		div[aria-label="Direct Messages"] ,
-        // Circle Icon Button
-        div[class*="circleIconButton_"] {
+		div[aria-label="Direct Messages"],
+    // Circle Icon Button
+    div[class*="circleIconButton_"] {
 			svg[role="img"] {
 				display: inline-block !important;
 				vertical-align: middle !important;
@@ -594,8 +582,9 @@ nav[aria-label="Servers sidebar"] {
 
 // Hover Effects
 html.app-focused nav[aria-label="Servers sidebar"]:hover {
-	--gac-expanded-width: 220px;
+	--gac-dynamic-width: var(--gac-expanded-width);
 	--gac-transition-delay: 0s;
+
 	div[class*="listItem_"] {
 		// Name Text
 		& > div[draggable="true"]::after, // Folder
@@ -603,7 +592,9 @@ html.app-focused nav[aria-label="Servers sidebar"]:hover {
 		div[data-list-item-id="guildsnav___home"]::after, // Home Button
 		div[class*="wrapper_"]::after // DM Notifications & Servers
 		{
-			max-width: calc(var(--gac-expanded-width) - var(--gac-collapse-width) - 1.5 * var(--gac-padding));
+			max-width: calc(var(--gac-dynamic-width) - var(--gac-collapse-width) - 1.5 * var(--gac-padding));
+			min-width: calc(var(--gac-dynamic-width) - var(--gac-collapse-width) - 1.5 * var(--gac-padding));
+			width: calc(var(--gac-dynamic-width) - var(--gac-collapse-width) - 1.5 * var(--gac-padding));
 			opacity: 1;
 		}
 	}
