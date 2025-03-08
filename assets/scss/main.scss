@@ -50,14 +50,10 @@ nav[aria-label="Private channels"] {
 	& > div[class*="scrollerBase_"] {
 		& > ul[aria-label="Direct Messages"] {
 			// Shop
-			& > li:has(a[href$="/shop"]) {
-				display: none !important;
-			}
-			// Nitro
-			& > li:has(a[href$="/store"]) {
-				display: none !important;
-			}
-			// New Nitro
+			& > li:has(a[href$="/shop"]),
+      // Nitro
+      & > li:has(a[href$="/store"]),
+      // New Nitro
 			& > div[aria-label="Try Nitro for 2 weeks on us!"] {
 				display: none !important;
 			}
@@ -67,10 +63,8 @@ nav[aria-label="Private channels"] {
 // Hide Download Apps & Discover in Servers Sidebar
 nav[aria-label="Servers sidebar"] > ul > div[class*="itemsContainer_"] {
 	// Download Apps
-	& > div[class*="scrollerBase_"] > div[class*="listItem_"]:has(div[aria-label="Download Apps"]) {
-		display: none !important;
-	}
-	// Discover
+	& > div[class*="scrollerBase_"] > div[class*="listItem_"]:has(div[aria-label="Download Apps"]) ,
+  // Discover
 	& > div[class*="footer_"] {
 		display: none !important;
 	}
@@ -424,6 +418,26 @@ nav[aria-label="Servers sidebar"] {
 			height: 32px !important;
 			border-radius: 50% !important;
 		}
+		// Servers without Icon
+		> div
+			> div[class*="blobContainer_"]
+			> div[class*="wrapper_"]
+			> svg
+			> foreignObject
+			> div[class*="wrapper_"]:not(:has(img))
+			> div[class*="childWrapper_"] {
+			display: inline-block !important;
+			vertical-align: middle !important;
+			line-height: 32px !important;
+			margin-left: 4px !important;
+			width: 32px !important;
+			min-width: 32px !important;
+			max-width: 32px !important;
+			height: 32px !important;
+			border-radius: 50% !important;
+			text-align: center !important;
+		}
+
 		// Home Icon
 		div[aria-label="Direct Messages"],
     // Circle Icon Button
