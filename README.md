@@ -2,7 +2,7 @@
 
 Stylesheet to Display Servers in a list view.\
 Menu expands when hovering over the regular sidebar.
-![PreviewImage](./README/Preview.png)
+![PreviewImage](./README/preview-screenshot.png)
 
 ### Compatability
 ##### Desktop Visual Refresh
@@ -10,11 +10,22 @@ This is *technically* working on the 2025 Desktop Visual Refresh, but has some v
 
 # Requirements
 
-[OpenASAR](https://openasar.dev/) - Discord CSS Injector
+**Recommended:**
 
-Or any other CSS Injector such as [BetterDiscord](https://betterdiscord.app/)
+[OpenASAR](https://openasar.dev/) - Lightweight Discord CSS Injector
+
+**Also Compatible:**
+
+Any other alternative CSS Injector such as [Vencord](https://vencord.dev/), [Vesktop](https://github.com/Vencord/Vesktop) or [BetterDiscord](https://betterdiscord.app/) will also work.
 
 # Installation
+
+**Install instructions are available as per your method of injection:**
+
+<details>
+<summary>Installation Guide for OpenASAR</summary>
+
+#### Installation Guide for OpenASAR
 
 Add the following to your CSS Config:
 
@@ -22,12 +33,33 @@ Add the following to your CSS Config:
 @import url(https://pinpal.github.io/CompactDiscordServers/assets/css/main.css);
 ```
 
-![InstallImage](./README/Config.png)
+![InstallImage](./README/config-openasar.png)
+</details>
+
+<details>
+<summary>Installation Guide for Vencord & Vesktop</summary>
+
+#### Installation Guide for Vencord & Vesktop
+
+1. Navigate to the Settings Menu within Discord
+2. Locate the `Themes` subsection within the `Vencord` section
+3. Click on `Online Themes` in the pill selector at the top
+4. Insert the following URL into the text box:
+
+```
+https://pinpal.github.io/CompactDiscordServers/assets/css/main.css
+```
+
+![InstallImage](./README/config-vencord.png)
+</details>
 
 
 # Customisation
+
 <details>
-  <summary>Click to View all the variables you can adjust in your CSS Config</summary>
+<summary>
+Click to View all the variables you can adjust in your CSS Config
+</summary>
 
 **Sidebar Width**
 ```scss
