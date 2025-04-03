@@ -4,6 +4,10 @@ Stylesheet to Display Servers in a list view.\
 Menu expands when hovering over the regular sidebar.
 ![PreviewImage](./README/Preview.png)
 
+### Compatability
+##### Desktop Visual Refresh
+This is *technically* working on the 2025 Desktop Visual Refresh, but has some visual issues. A complete rewrite is in the works and will be available soon.
+
 # Requirements
 
 [OpenASAR](https://openasar.dev/) - Discord CSS Injector
